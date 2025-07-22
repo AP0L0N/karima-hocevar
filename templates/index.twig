@@ -1,0 +1,16 @@
+{% extends '_layouts/main' %}
+
+{% block content %}
+    <section class="page-wrapper" id="{{ entry.type.handle }}">
+
+        {# loop through the custom fields in the entry #}
+        {% for field in entry.getFieldLayout().getCustomFields() %}
+
+            {% if field.handle == 'buildingBlocks' %}
+                {% include '_matrix/' ~ field.handle %}
+            {% endif %}
+
+        {% endfor %}
+        
+    </section>
+{% endblock %}

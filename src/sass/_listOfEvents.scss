@@ -1,0 +1,58 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'eventCard';
+
+.list-of-events {
+    background-color: $gray-f7;
+    padding: 70px 0 115px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 140px 0 230px;
+    }
+
+    &.list-all-events {
+        padding: 60px 0 100px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 100px 0 140px;
+        }
+    }
+
+    .container {
+
+        .list-of-events__wrapper {
+            
+            .list-of-events__wrapper__heading {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 35px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 47px;
+                }
+
+                h2 {
+                    margin-bottom: 0;
+                }
+
+                .btn {
+
+                    &.btn-primary {
+                        span {
+
+                        }
+                    }
+                }
+            }
+
+            .list-of-events__wrapper__list {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 40px;
+            }
+        }
+    }
+}
+
+

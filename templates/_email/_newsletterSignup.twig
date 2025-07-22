@@ -1,0 +1,30 @@
+{% extends '_email/email' %}
+
+{% block content %}
+<table align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="padding-top:80px;">
+    <tr>
+        <td>
+            <table align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; border-radius: 30px;">
+                <tr>
+                    <td align="center" style="padding: 40px 40px 20px;">
+                        <img src="{{ getenv('PRIMARY_SITE_URL') }}/assets/img/email-newsletter-signup-icon.png" alt="">
+                        <h2 style="color: #EA6387; font-size: 36px; margin: 10px 0;font-weight: 500;">{{ "Newsletter sign up confirmed!" | t }}</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0 40px 35px 40px;text-align:center;">
+                        <p style="color: #241E1B; font-size: 18px; line-height: 1.5;font-weight: 400;">
+                            {{"Dear" | t }} {{ name }},
+                        </p>
+                        <p style="color: #241E1B; font-size: 18px; line-height: 1.5;font-weight: 400;">
+                            {{ "you've successfully signed up for our newsletter! <br>Expect a to receive a new update shortly." | t | raw }}
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            {% include '_email/_footer' %}
+        </td>
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,131 @@
+color: rose
+fieldLayouts:
+  f092f4a0-3ced-4d71-9323-664273979127:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-03-14T20:40:04+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5a2cfd5b-dc59-4ceb-826c-989c0d83e57c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T20:43:33+00:00'
+            elementCondition: null
+            fieldUid: 41c6d7d1-9c2a-4c1e-abfa-06ae34d3d08a # Email
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62aaba0d-fa6b-4032-a7bc-1fcb1777acf5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T20:43:33+00:00'
+            elementCondition: null
+            fieldUid: dd5d4e62-a4a2-4de9-b269-49a029773e71 # Simple text
+            handle: phone
+            includeInCards: false
+            instructions: null
+            label: Phone
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca837b9f-5f15-4202-b474-6f297b977fba
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T20:43:33+00:00'
+            elementCondition: null
+            fieldUid: dd5d4e62-a4a2-4de9-b269-49a029773e71 # Simple text
+            handle: profession
+            includeInCards: false
+            instructions: null
+            label: Profession
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87f0883e-9b95-4d59-820c-d7a0f24d57fe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T20:43:33+00:00'
+            elementCondition: null
+            fieldUid: dd5d4e62-a4a2-4de9-b269-49a029773e71 # Simple text
+            handle: eventTitle
+            includeInCards: false
+            instructions: null
+            label: 'Event title'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a49bd86-d11c-4dfc-81b0-148d170b3c67
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T20:43:33+00:00'
+            elementCondition: null
+            fieldUid: bd66d959-e1e6-497b-a56f-8afd1dec9545 # Event
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 990ea861-c0b6-4698-8790-2991f70f896c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5fc7d926-1ad3-422b-8c09-dcb321fce467
+        userCondition: null
+handle: eventSubscriber
+hasTitleField: true
+icon: user-graduate
+name: 'Event subscriber'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

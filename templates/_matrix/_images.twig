@@ -1,0 +1,9 @@
+{% if images %}
+<div class="images-wrapper">
+    <img src="{{ images.image.one().getUrl(transform) }}" alt="{{ images.image.one().title }}" class="desktop-image {{ images.mobileImage.one() ? 'd-none d-lg-block' : '' }}">
+
+    {% if images.mobileImage.one() %}
+        <img src="{{ images.mobileImage.one().getUrl(mobileTransform) }}" alt="{{ images.mobileImage.one().title }}" class="mobile-image d-lg-none">
+    {% endif %}
+</div>
+{% endif %}

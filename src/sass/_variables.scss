@@ -1,0 +1,53 @@
+
+// Fonts
+$font-sofia-regular: 'Sofia Pro Regular', sans-serif;
+$font-sofia-italic: 'Sofia Pro Italic', sans-serif;
+$font-sofia-extralight: 'Sofia Pro ExtraLight', sans-serif;
+$font-sofia-ultralight: 'Sofia Pro UltraLight', sans-serif;
+$font-sofia-extralight-italic: 'Sofia Pro ExtraLight Italic', sans-serif;
+$font-sofia-ultralight-italic: 'Sofia Pro UltraLight Italic', sans-serif;
+$font-sofia-light: 'Sofia Pro Light', sans-serif;
+$font-sofia-light-italic: 'Sofia Pro Light Italic', sans-serif;
+$font-sofia-medium: 'Sofia Pro Medium', sans-serif;
+$font-sofia-medium-italic: 'Sofia Pro Medium Italic', sans-serif;
+$font-sofia-semibold: 'Sofia Pro SemiBold', sans-serif;
+$font-sofia-semibold-italic: 'Sofia Pro SemiBold Italic', sans-serif;
+$font-sofia-bold: 'Sofia Pro Bold', sans-serif;
+$font-sofia-bold-italic: 'Sofia Pro Bold Italic', sans-serif;
+$font-sofia-black: 'Sofia Pro Black', sans-serif;
+$font-sofia-black-italic: 'Sofia Pro Black Italic', sans-serif;
+
+
+$font-family-base: $font-sofia-extralight;
+$font-family-raleway: 'Raleway', sans-serif;
+
+$font-size-base: 20px;
+$font-size-sm: 18px;
+$font-size-xs: 16px;
+
+// Colors
+$primary: #E2785F;
+$default: #534F4E;
+$dark: #241E1B;
+
+$pink-d8: #D898A9;
+$pink-f0: #FFF0F5;
+$pink-c5: #C58FAC;
+$gray-24: #241E1B;
+$gray-f7: #F8F0E9;
+$gray-f2: #EFD8D3;
+$gray-75: #75716E;
+$gray-cf: #CFCFCF;
+
+$green: #2F604E;
+
+// Grid
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1600px
+); 

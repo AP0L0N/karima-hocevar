@@ -1,0 +1,31 @@
+{% set inspirations = field is defined and field['inspirations'] and field['inspirations'].all() | length ? field['inspirations'].all() : 
+    craft.entries.section('inspirations').orderBy('postDate DESC').limit(field is defined and field['listAllInspirations'] is defined and field['listAllInspirations'] ? null : 3).all() %}
+
+{% if inspirations | length %}
+<div class="list-of-inspirations {{ field is defined and field['listAllInspirations'] is defined and field['listAllInspirations'] ? 'list-all-inspirations' : '' }}">
+    <div class="container">
+        <div class="list-of-inspirations__wrapper">
+
+            {% if field is defined and field['listAllInspirations'] is not defined or field['listAllInspirations'] == false %}
+                <h2>{{ field is defined and field['heading'] is not empty ? field['heading'] : ("Inspirations" | t) }}</h2>
+            {% else %}
+                <h1>{{ field is defined and field['heading'] is not empty ? field['heading'] : ("Inspirations" | t) }}</h1>
+            {% endif %}
+
+            <div class="list-of-inspirations__list">
+                {% for item in inspirations %}
+                    {% include '_matrix/_inspirationCard' with item %}
+                {% endfor %}
+            </div>
+
+            {% if field is defined and (field['listAllInspirations'] is not defined or field['listAllInspirations'] == false) %}
+                <div class="all-inspirations-link">
+                    <a href="/inspirations" class="btn btn-primary">
+                        <span>{{ "All inspirations" | t }}</span>
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}

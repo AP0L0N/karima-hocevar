@@ -1,0 +1,53 @@
+color: yellow
+fieldLayouts:
+  0b4e4a7a-2297-4676-ac76-6ad31121928c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-13T21:38:29+00:00'
+            elementCondition: null
+            fieldUid: 825511a6-afc4-457c-a1bd-c476ab5d2e56 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 08a88bb4-156c-4633-84f5-5cd9f5b24e0e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T21:38:29+00:00'
+            elementCondition: null
+            fieldUid: 825511a6-afc4-457c-a1bd-c476ab5d2e56 # Image
+            handle: mobileImage
+            includeInCards: false
+            instructions: null
+            label: 'Mobile image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 033d0eef-2816-4a44-8a29-a76c412495ef
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bd9ee002-eca9-413e-87a7-f58eeb6627d5
+        userCondition: null
+handle: images
+hasTitleField: false
+icon: image-polaroid
+name: Images
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

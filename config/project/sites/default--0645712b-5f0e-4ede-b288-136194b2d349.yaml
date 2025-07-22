@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en
+name: 'Karima Hočevar'
+primary: true
+siteGroup: 57c3e1d3-da51-4a25-b8f9-d57bfbe8dcc8 # Karima Hočevar
+sortOrder: 1

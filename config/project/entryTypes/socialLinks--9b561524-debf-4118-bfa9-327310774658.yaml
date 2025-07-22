@@ -1,0 +1,20 @@
+color: yellow
+fieldLayouts:
+  c093b7d2-66b2-475d-8f8f-1531108d2226:
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: 9ea6218a-9c71-41dd-bc88-b7d0c2c8d20a
+        userCondition: null
+handle: socialLinks
+hasTitleField: false
+icon: facebook
+name: 'Social links'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

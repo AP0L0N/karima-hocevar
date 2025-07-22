@@ -1,0 +1,53 @@
+color: yellow
+fieldLayouts:
+  959b935a-8f4d-4952-b4de-2f17a66bc19a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-13T22:55:59+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 032378b9-225f-4ca4-b509-5bf5b952dde2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T22:55:59+00:00'
+            elementCondition: null
+            fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 66af9589-1520-49a8-982e-6ddca319d308
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d51d78a2-27e3-447a-bce7-b0de5ec24cde
+        userCondition: null
+handle: fullTextBox
+hasTitleField: false
+icon: text
+name: 'Full text box'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

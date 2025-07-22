@@ -1,0 +1,317 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+.event-content {
+
+    .hero-banner {
+        padding-top: 45px;
+    
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+        }
+
+        &__content {
+            position: static !important;
+
+            @include media-breakpoint-down(lg) {
+                padding: 20px 20px 40px !important;
+            }
+
+            @include media-breakpoint-up(lg) {
+                position: relative !important;
+            }
+
+            .breadcrumbs {
+                position: absolute;
+                top: -33px;
+                left: 16px;
+
+                @include media-breakpoint-up(lg) {
+                    left: 0;
+                }
+
+                a {
+                    color: $gray-75;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 3px;
+
+                    @include media-breakpoint-up(lg) {
+                        gap: 7px;
+                    }
+
+                    svg {
+                        
+                    }
+                    span {
+                        
+                    }
+                }
+            }
+
+            .super-title {
+                color: $dark;
+                font-family: $font-sofia-light;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 1.12px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+
+                @include media-breakpoint-up(lg) {
+                    
+                }
+            }
+
+            h1 {
+                
+            }
+
+            .actions {
+                margin-top: 20px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 74px;
+                }
+
+                .btn {
+
+                    span {
+                        
+                    }
+                }
+            }
+        }
+
+        &__image {
+            
+        }
+    }
+
+    .abount-the-event {
+        padding: 60px 0;
+
+        @include media-breakpoint-up(lg) {
+            padding: 96px 0;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: 1fr 400px;
+                gap: 80px;
+            }
+
+            &__content {
+
+                h2 {
+                    font-weight: 500;
+                    margin-bottom: 25px;
+
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: 57px;
+                    }
+                }
+    
+                .description {
+                    font-size: 18px;
+                    line-height: 1.4;
+                    margin-bottom: 20px;
+
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: 40px;
+                        font-size: 20px;
+                    }
+
+                    a {
+                        color: $primary;
+                        text-decoration: none;
+                    }
+                }
+    
+                h3 {
+                    font-weight: 600;
+                    margin-bottom: 16px;
+                }
+    
+                .dates {
+                    border-top: 1px solid $gray-cf;
+                    border-bottom: 1px solid $gray-cf;
+                    padding: 23px 0;
+                    margin-bottom: 24px;
+                    margin-top: 25px;
+
+                    .date {
+                        color: black;
+                        font-size: 32px;
+                        font-weight: 400;
+                        line-height: 40px;
+                        font-family: $font-sofia-regular;
+                        margin-bottom: 0;
+                    }
+    
+                    .date-extra-notes {
+                        margin-top: 9px;
+                        margin-bottom: 0;
+                    }
+                }
+    
+                .price {
+                    .price-amount {
+                        
+                    }
+                }
+            }
+    
+            &__sidebar {
+
+                &__inner-wrapper {
+                    border-radius: 30px;
+                    background: white;
+                    box-shadow: 4px 16px 16px 0px rgba(83, 79, 78, 0.16);
+                    padding: 20px;
+
+                    @include media-breakpoint-up(lg) {
+                        padding: 40px;
+                    }
+    
+                    .sidebar-item {
+                        margin-bottom: 18px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .item-heading {
+                            margin-bottom: 6px;
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            svg {
+                                position: relative;
+                                top: -2px;
+                            }
+
+                            span {
+                                color: $dark;
+                                font-family: $font-sofia-medium;
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 28px;
+                            }
+                        }
+        
+                        .item-content {
+                            margin-bottom: 0;
+                            color: $default;
+                            font-family: $font-sofia-extralight;
+                            font-size: 20px;
+                            font-weight: 300;
+                            line-height: 28px;
+                            padding-left: 2px;
+                        }
+                    }
+
+                    .actions {
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .registration-form {
+        background-color: $pink-c5;
+        padding: 60px 0 40px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 109px 0 80px;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+            }
+
+            &__content {
+
+                h2 {
+                    color: #FFF;
+                    font-family: $font-family-raleway;
+                    font-size: 38px;
+                    font-weight: 500;
+                    line-height: 1.07;
+                    margin-bottom: 18px;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 56px;
+                        margin-bottom: 28px;
+                    }
+                }
+
+                p {
+                    color: #FFF;
+                    font-family: $font-sofia-extralight;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 1.4;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &__form {
+
+                form {
+                    .form-group {
+                        margin-bottom: 21px;
+
+                        label {
+                            color: #FFF;
+                            font-family: $font-sofia-light;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 1.12px;
+                            text-transform: uppercase;
+                            margin-bottom: 3px;
+                        }
+
+                        input {
+                            border-radius: 30px;
+                            border: 1px solid #9C9994;
+                            background: #FFF;
+                            color: #75716E;
+                            font-family: $font-sofia-extralight;
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 28px;
+                            padding: 13px 16px;
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    button {
+                        margin-top: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+

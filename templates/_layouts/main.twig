@@ -1,0 +1,130 @@
+{% cache for 1 day %}
+<!DOCTYPE html>
+<html lang="{{ currentSite.language }}">
+<head>
+    <meta charset="UTF-8">
+
+    {% hook "seo" %}
+    
+    {# Favicon #}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+
+    {# Styles #}
+    <link rel="stylesheet" href="{{ mix('css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/main.css') }}">
+
+</head>
+<body class="{{ entry.section.handle }}">
+
+
+    {# Header #}
+    {% include '_layouts/_header' %}
+
+
+    {# Main content #}
+    <main class="main-content">
+        {% block content %} {{ content is defined ? content }} {% endblock %}
+    </main>
+
+
+    {# Footer #}
+    {% include '_layouts/_footer' %}
+
+    {# Cookie Banner placeholder #}
+    <div id="tkcb"></div>
+
+     
+    {# Scripts #}
+    <script src="{{ mix('js/app.js') }}" type="module"></script>
+    <script src="{{ mix('js/cookie-banner.js') }}"></script>
+
+    
+    {# Cookie Banner #}
+    <script>
+        const cookieBanner = new CookieBanner({
+            consents: [
+                'essential',
+                'analytics_storage',
+                'ad_storage',
+                'ad_personalization',
+                'ad_user_data',
+            ],
+            classes: {
+                contentContainer: 'container',
+                buttonPrimary: 'btn btn-primary',
+                buttonSecondary: 'btn btn-outline-primary',
+            },
+            strings: {
+                title: '{{ 'Cookies and your data' | t }}',
+                titleSettings: '{{ 'Settings' | t }}',
+                description: '{{ 'We use cookies and other technologies to customize your user experience and analyze traffic. We or our partners may process your personal data for personalized or non-personalized advertising and building target groups. You can find settings and more information in our <a href="/cookies" target="_blank">cookie policy</a>.' | t | raw }}',
+                descriptionGoogle: `{{ 'We use Google Analytics and Google Ads services. For more information on how Google processes your data, visit <a href="https://business.safety.google/privacy/">Google Business Data Responsibility Site</a>.' | t | raw }}`,
+                descriptionSettings: '{{ 'By changing the settings below, you allow or reject the use of cookies and the processing of your personal data for:' | t }}',
+                descriptionBelowSettings: '{{ 'More information about cookies and processing of your data can be found in our <a href="/privacy-policy">cookie policy</a>.' | t | raw }}',
+                accept: '{{ 'Accept all' | t }}',
+                decline: '{{ 'Decline all' | t }}',
+                settings: '{{ 'Settings' | t }}',
+                close: '{{ 'Close' | t }}',
+                back: '{{ 'Back' | t }}',
+
+                consents: {
+                    essential: '{{ 'basic functionality' | t }}',
+                    analytics_storage: '{{ 'traffic analysis' | t }}',
+                    ad_storage: '{{ 'advertising' | t }}',
+                    ad_personalization: '{{ 'personalized advertising' | t }}',
+                    ad_user_data: '{{ 'advertising based on user data' | t }}'
+                }
+            }
+        });
+
+        // cookieBanner.init()
+    </script>
+
+    {# Embed Youtube videos #}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const figures = document.querySelectorAll('figure.media');
+            
+            figures.forEach(figure => {
+                const oembed = figure.querySelector('oembed');
+                if (oembed) {
+                    const url = oembed.getAttribute('url');
+                    if (url) {
+                        // Extract video ID from YouTube URL
+                        const videoId = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/)?.[1];
+                        
+                        if (videoId) {
+                            const iframe = document.createElement('iframe');
+                            iframe.style.width = '100%';
+                            iframe.style.height = 'auto';
+                            iframe.style.display = 'block';
+                            iframe.style.aspectRatio = '16/9';
+                            iframe.width = '560';
+                            iframe.height = '315';
+                            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                            iframe.title = 'YouTube video player';
+                            iframe.frameBorder = '0';
+                            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+                            iframe.allowFullscreen = true;
+                            
+                            figure.innerHTML = '';
+                            figure.appendChild(iframe);
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
+{% endcache %}

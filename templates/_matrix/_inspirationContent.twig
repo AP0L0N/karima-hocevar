@@ -1,0 +1,86 @@
+<div class="inspiration-content">
+
+    <div class="container">
+        <div class="inspiration-content__wrapper">
+            <div class="breadcrumb">
+                <a href="/inspiration">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M8.57282 9.4991L12.4916 13.4179L11.3722 14.5373L6.33398 9.4991L11.3722 4.46094L12.4916 5.58035L8.57282 9.4991Z" fill="#9C9994"/>
+                    </svg>
+                    <span>{{ "Inspiration" | t }}</span>
+                </a>
+            </div>
+
+            <div class="inspiration-content__wrapper__header">
+
+                <p class="posted-on">{{ "Posted on: " | t }} {{ field.postDate | date("F d, Y") }}</p>
+
+                <h1>
+                    {{ entry.title }}
+                </h1>
+
+                <p class="sub-title">{{ field.subTitle }}</p>
+            </div>
+
+            {% if field.image.one() %}
+                <div class="inspiration-content__wrapper__image">
+                    <img src="{{ field.image.one().getUrl('inspirationCover') }}" alt="{{ field.image.one().alt }}">
+                </div>
+            {% endif %}
+
+            <div class="inspiration-content__wrapper__content">
+                {% for content in field.editorContents.all() %}
+                    {% if content.type == 'editorText' %}
+                        <div class="inspiration-content__wrapper__content__text">
+                            {{ content.description | raw }}
+                        </div>
+                    {% endif %}
+
+                    {% if content.type == 'quote' %}
+                        <div class="inspiration-content__wrapper__content__quote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="113" viewBox="0 0 40 113" fill="none">
+                                <path d="M5.63833 110.869C3.92167 109.046 3 107.001 3 103.686C3 97.8524 7.095 92.6241 13.05 90.0391L14.5383 92.3357C8.98 95.3424 7.89333 99.2441 7.46 101.704C8.355 101.241 9.52667 101.079 10.675 101.186C13.6817 101.464 16.0517 103.932 16.0517 107.001C16.0517 110.222 13.44 112.834 10.2183 112.834C8.43 112.834 6.72 112.017 5.63833 110.869ZM22.305 110.869C20.5883 109.046 19.6667 107.001 19.6667 103.686C19.6667 97.8524 23.7617 92.6241 29.7167 90.0391L31.205 92.3357C25.6467 95.3424 24.56 99.2441 24.1267 101.704C25.0217 101.241 26.1933 101.079 27.3417 101.186C30.3483 101.464 32.7183 103.932 32.7183 107.001C32.7183 110.222 30.1067 112.834 26.885 112.834C25.0967 112.834 23.3867 112.017 22.305 110.869Z" fill="#C58FAC"/>
+                            </svg>
+                            <p class="quote">{{ content.quote }}</p>
+                            <p class="author">— {{ content.authorName }}</p>
+                        </div>
+                    {% endif %}
+
+                    {% if content.type == 'highlightedText' %}
+                        <div class="inspiration-content__wrapper__content__highlighted-text">
+                            <p class="highlighted-text">{{ content.highlightedText }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="share-icons">
+                <div class="share-icons__wrapper">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ entry.url | url_encode }}" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="#C58FAC"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url={{ entry.url | url_encode }}&text={{ entry.title | url_encode }}" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 5.79995C21.2483 6.12606 20.4534 6.34163 19.64 6.43995C20.4982 5.92729 21.1413 5.12075 21.45 4.16995C20.6436 4.65006 19.7608 4.98851 18.84 5.16995C18.2245 4.50254 17.405 4.05826 16.5098 3.90682C15.6147 3.75537 14.6945 3.90532 13.8938 4.33315C13.093 4.76099 12.4569 5.4425 12.0852 6.27190C11.7135 7.10129 11.6273 8.02736 11.84 8.90995C10.2094 8.82749 8.61444 8.40292 7.15865 7.66383C5.70287 6.92474 4.41885 5.88766 3.39 4.61995C3.02914 5.25011 2.83952 5.96379 2.84 6.68995C2.83872 7.36415 3.00422 8.02858 3.32176 8.62353C3.63929 9.21848 4.09902 9.72568 4.66 10.1C4.00798 10.0822 3.37163 9.90726 2.8 9.58995V9.63995C2.80489 10.5849 3.13599 11.4991 3.73731 12.2279C4.33864 12.9568 5.17326 13.4556 6.1 13.64C5.74326 13.7485 5.37287 13.8058 5 13.81C4.74189 13.807 4.48442 13.7835 4.23 13.74C4.49391 14.5528 5.00462 15.2631 5.69107 15.7721C6.37753 16.2811 7.20558 16.5635 8.06 16.58C6.6172 17.7152 4.83588 18.3348 3 18.34C2.66574 18.3411 2.33174 18.321 2 18.28C3.87443 19.4902 6.05881 20.1327 8.29 20.13C9.82969 20.146 11.3571 19.8533 12.7831 19.2714C14.2091 18.6895 15.505 17.8311 16.5952 16.7456C17.6854 15.6601 18.5491 14.368 19.1367 12.9445C19.7243 11.521 20.0229 9.99495 20.0129 8.45495L20 7.91995C20.7847 7.33478 21.4615 6.61739 22 5.79995Z" fill="#C58FAC"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ entry.url | url_encode }}&title={{ entry.title | url_encode }}" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="#C58FAC"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% include '_matrix/_listOfInspirations' with {
+    field: {
+        inspirations: craft.entries.section('inspirations').id('not ' ~ entry.id).orderBy('postDate DESC').limit(3),
+        heading: "More inspirations" | t
+    }
+} %}

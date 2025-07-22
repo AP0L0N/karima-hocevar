@@ -1,0 +1,122 @@
+<div class="newsletter-signup-form">
+    <div class="container">
+        <div class="newsletter-signup-form__wrapper">
+
+            <div class="newsletter-signup-form__heading">
+                <h1>{{ field.heading }}</h1>
+            </div>
+
+            <div class="newsletter-signup-form__form">
+                <div class="container">
+                    <div class="registration-form__wrapper">
+                        <div class="registration-form__wrapper__content">
+                            <h2>{{ "Stay updated! Sign up for our newsletter!" | t }}</h2>
+                            <p>{{ "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. " | t }}</p> 
+                        </div>
+        
+                        <div class="registration-form__wrapper__form">
+                            <img src="/assets/img/newsletter-icon.svg" alt="">
+
+                            <form id="newsletterSignupForm" onsubmit="event.preventDefault();">
+                                <div class="form-group">
+                                    <label for="name">{{ "NAME" | t }}</label>
+                                    <input type="text" id="name" name="name" placeholder="{{ "Your name" | t }}" required>
+                                </div>
+        
+                                <div class="form-group">
+                                    <label for="email">{{ "EMAIL" | t }}</label>
+                                    <input type="email" id="email" name="email" placeholder="{{ "Your email" | t }}" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="newsletter-consent" name="newsletter-consent" class="visually-hidden" value="0">
+                                        <label for="newsletter-consent" class="custom-checkbox__label">
+                                            <span class="custom-checkbox__box"></span>
+                                            <span class="custom-checkbox__text">{{ "By signing up for the Mudita newsletter, I agree to receive news, updates and special offers to my email. Everything is handled in accordance with the {terms} and {privacy}." | t({
+                                                terms: '<a href="/terms-of-use" target="_blank">' ~ "Terms of use" | t ~ '</a>',
+                                                privacy: '<a href="/privacy-policy" target="_blank">' ~ "Privacy policy" | t ~ '</a>'
+                                            }) | raw }}</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-danger d-none align-items-center" role="alert" id="newsletter-error">
+                                    <div>
+                                        {{ "Please agree to the privacy policy before signing up." | t }}
+                                    </div>
+                                </div>
+
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const customCheckbox = document.querySelector('.custom-checkbox');
+                                        const newsletterConsentLabel = document.querySelector('.custom-checkbox__label[for="newsletter-consent"]');
+                                        const newsletterConsent = document.getElementById('newsletter-consent');
+
+                                        newsletterConsent.addEventListener('change', function() {
+                                            customCheckbox.classList.toggle('checked', newsletterConsent.getAttribute('value') == '1');
+                                        });
+
+                                        newsletterConsentLabel.addEventListener('click', function() {
+                                            newsletterConsent.setAttribute('value', newsletterConsent.getAttribute('value') == '1' ? '0' : '1');
+                                        });
+                                    });
+                                </script>
+
+                                <button class="g-recaptcha btn btn-primary"
+                                    data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"
+                                    data-callback='subscribeToNewsletter'
+                                    data-action='submit'>
+                                    <span>{{ "Sign up" | t }}</span>
+                                </button>
+
+                                <div class="alert alert-success d-none align-items-center mt-4" role="alert" id="newsletter-success">
+                                    <div>
+                                        {{ "You've successfully signed up for our newsletter!" | t }}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js?sitekey={{ getenv('RECAPTCHA_SITE_KEY') }}" async defer></script>
+
+<script>
+    function subscribeToNewsletter(token) {
+        const form = document.getElementById('newsletterSignupForm');
+        const formData = new FormData(form);
+        formData.append('token', token);
+
+        // Check if user agreed to privacy policy
+        const newsletterConsent = document.getElementById('newsletter-consent');
+        if (newsletterConsent.getAttribute('value') !== '1') {
+            const newsletterError = document.getElementById('newsletter-error');
+            newsletterError.classList.remove('d-none');
+            newsletterError.classList.add('d-flex');
+            return;
+        }
+
+        fetch('/newsletter-signup', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            const newsletterSuccess = document.getElementById('newsletter-success');
+            newsletterSuccess.classList.remove('d-none');
+            newsletterSuccess.classList.add('d-flex');
+            form.reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>

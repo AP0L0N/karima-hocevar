@@ -1,0 +1,144 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+.newsletter-signup-form {
+    background-color: $gray-f7;
+    padding: 60px 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 80px 0;
+    }
+
+    .registration-form {
+        background-color: $pink-c5;
+        padding: 60px 0 40px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 109px 0 80px;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+            }
+
+            &__content {
+
+                h2 {
+                    color: #000;
+                    font-family: $font-family-raleway;
+                    font-size: 38px;
+                    font-weight: 500;
+                    line-height: 1.07;
+                    margin-bottom: 18px;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 56px;
+                        margin-bottom: 28px;
+                    }
+                }
+
+                p {
+                    color: #534F4E;
+                    font-family: $font-sofia-extralight;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 1.4;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &__form {
+
+                img {
+                    margin-bottom: 21px;
+                }
+
+                form {
+
+                    .form-group {
+                        margin-bottom: 21px;
+
+                        label {
+                            color: #534F4E;
+                            font-family: $font-sofia-light;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 1.12px;
+                            text-transform: uppercase;
+                            margin-bottom: 3px;
+                        }
+
+                        input {
+                            border-radius: 30px;
+                            border: 1px solid #9C9994;
+                            background: #FFF;
+                            color: #241E1B;
+                            font-family: $font-sofia-extralight;
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 28px;
+                            padding: 13px 16px;
+                            display: block;
+                            width: 100%;
+                        }
+
+                        .custom-checkbox {
+
+                            &.checked {
+
+                                .custom-checkbox__box {
+                                    background: $primary;
+                                }
+                            }
+
+                            &__label {
+                                color: #534F4E;
+                                font-family: $font-sofia-extralight;
+                                font-size: 16px;
+                                font-weight: 300;
+                                text-transform: none;
+                                display: flex;
+                                align-items: flex-start;
+                                gap: 12px;
+
+                                @include media-breakpoint-up(lg) {
+                                    font-size: 18px;
+                                }
+
+                                a {
+                                    color: #2F604E;
+                                    text-decoration: none;
+                                }
+                            }
+
+                            &__box {
+                                display: block;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 30px;
+                                border: 1px solid #9C9994;
+                                background: white;
+                                flex-shrink: 0;
+                            }
+                        }
+                    }
+
+                    button {
+                        margin-top: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+}

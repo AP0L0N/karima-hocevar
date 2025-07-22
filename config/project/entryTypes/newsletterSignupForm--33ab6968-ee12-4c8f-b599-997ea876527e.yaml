@@ -1,0 +1,20 @@
+color: yellow
+fieldLayouts:
+  bcf52a17-65a1-4623-a02b-de0051b5bb2f:
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: 3fc7abfa-4a4b-427d-8ba3-25a029861e20
+        userCondition: null
+handle: newsletterSignupForm
+hasTitleField: false
+icon: envelope
+name: 'Newsletter signup form'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

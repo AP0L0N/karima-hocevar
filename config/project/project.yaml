@@ -1,0 +1,105 @@
+dateModified: 1748263455
+email:
+  fromEmail: poje.tilen@gmail.com
+  fromName: 'Karima Hočevar'
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: '/usr/sbin/sendmail -t -i'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  localFilesystem:
+    hasUrls: true
+    name: 'Local filesystem'
+    settings:
+      path: '@webroot/assets/uploads'
+    type: craft\fs\Local
+    url: $PRIMARY_SITE_URL/assets/uploads
+meta:
+  __names__:
+    1cc501c6-7465-41d2-a392-9870a0a59e48: Events # Events
+    1fb86694-1ef7-4a8a-8874-cad4b0e765fe: 'Hero banner - mobile' # Hero banner - mobile
+    2d541ab1-b48d-4113-92a8-96a1bf6325be: 'List of inspirations' # List of inspirations
+    3c629f1c-8092-42de-9b94-f4da68628746: 'Image side' # Image side
+    4b047672-6c3e-4824-86ab-284a4e4a32bb: 'Full text box' # Full text box
+    5ab75c5d-c8c5-4895-a5dc-1939062b0c25: 'Newsletter subscribers' # Newsletter subscribers
+    05bbd45d-9ddc-4134-8cba-c41b83c3c23a: 'Page sections' # Page sections
+    05d9af86-c1bf-46ee-a5fa-37450aa42e78: EPR # EPR
+    5fd391e7-5e9b-4552-9423-16102d2210cc: Heading # Heading
+    6c899c98-0e37-4bb5-97df-5b1d53b40281: Actions # Actions
+    8cd1b229-e07c-46b6-8480-780c5542757d: 'Building blocks' # Building blocks
+    9b561524-debf-4118-bfa9-327310774658: 'Social links' # Social links
+    9bca6d4c-e414-4fbe-bc05-53d304d14380: Quote # Quote
+    12d93a50-135a-4e0d-9cef-dadc1209904d: 'Editor text' # Editor text
+    22e0a339-a048-4547-94a6-c3d53a4a6523: Events # Events
+    33ab6968-ee12-4c8f-b599-997ea876527e: 'Newsletter signup form' # Newsletter signup form
+    41c6d7d1-9c2a-4c1e-abfa-06ae34d3d08a: Email # Email
+    41ea246c-1f5f-4cd8-86a8-790cb170ac60: Images # Images
+    47ee7517-59aa-4532-a3c5-028ed325670d: Description # Description
+    53b78b55-85a7-4079-9f0f-c7a0382407c2: 'Event content' # Event content
+    57c3e1d3-da51-4a25-b8f9-d57bfbe8dcc8: 'Karima Hočevar' # Karima Hočevar
+    58e5b824-8237-4fc4-87f3-570c3969b621: Simple # Simple
+    62d1b830-f495-4a67-a4b3-e4fb92cc74a8: Inspirations # Inspirations
+    73a7162d-b07e-405d-be78-96423e43ca89: Images # Images
+    76b2d286-67bc-4afc-8e4c-26e40162c6b3: 'Inspiration content' # Inspiration content
+    84aee63b-202b-4dea-8359-9ae287d08930: Date # Date
+    90ac9b7f-48f2-40ad-a8e5-792e63613177: 'Image with text box' # Image with text box
+    096e6a68-e847-45c2-bfd7-9bb92635af8f: 'Event subscriber' # Event subscriber
+    98b9fa03-bce6-4e8d-934d-53c9202cf2e6: Homepage # Homepage
+    485d659b-8c7c-48bc-ad83-f6f8b8b19b95: 'Editor contents' # Editor contents
+    507d02cd-6d18-491c-a393-b0ed79f2f535: 'Highlighted text' # Highlighted text
+    561f5795-edf2-4057-bf0c-1eede2181d9d: Images # Images
+    1436d17a-03bf-4c1e-9d30-47367529b37a: 'List of events' # List of events
+    6674e180-5fc8-4991-ba5e-add100694daa: 'Newsletter subscriber' # Newsletter subscriber
+    75968ea4-3e1b-46d8-86ef-1757f6d6cee8: Lightswitch # Lightswitch
+    0645712b-5f0e-4ede-b288-136194b2d349: 'Karima Hočevar' # Karima Hočevar
+    825511a6-afc4-457c-a1bd-c476ab5d2e56: Image # Image
+    928002ce-655c-46bc-97ca-19c15ed7aebc: 'SEO Settings' # SEO Settings
+    96144109-10c3-4a0d-a37f-8209502abc15: 'Hero banner - desktop' # Hero banner - desktop
+    b04c75fe-adfc-4caa-ba39-1fccca412c0a: 'Terms of use' # Terms of use
+    b2d2cb87-2384-4d1b-af7b-a63fa20a32d3: 'Event cover - mobile' # Event cover - mobile
+    b15f3341-8d99-4fb7-855b-fafd6719f3f6: 'Event cover' # Event cover
+    bcba9386-e72b-4149-9cad-8d09a8d484f2: Inspirations # Inspirations
+    bd66d959-e1e6-497b-a56f-8afd1dec9545: Event # Event
+    bf2f5bc2-6f9e-43bf-a077-04c031ffad09: 'Privacy policy' # Privacy policy
+    c3957b4d-40a6-4289-866b-41ae4874af42: 'All events' # All events
+    cc7fcca0-3053-4bca-85b8-873f7c668353: Newsletter # Newsletter
+    ce2a73cc-de2a-4098-9441-0917ccd65347: 'Hero banner' # Hero banner
+    d0a1cff7-d09f-4010-a16e-1f73ee2993bb: 'Resonant Touch' # Resonant Touch
+    dd5d4e62-a4a2-4de9-b269-49a029773e71: 'Simple text' # Simple text
+    efcdaba7-ebcc-4c3b-93af-6444a803da64: 'Event registrations' # Event registrations
+    f4b8921b-b141-469c-a6c0-bbe3c26cc73f: 'Image with text box' # Image with text box
+    f8b207c1-f9ae-4559-9ed1-c16736ec2a67: 'All inspirations' # All inspirations
+    f577f701-0c33-41a7-be8e-657503de63b8: 'Inspiration cover' # Inspiration cover
+    f105584b-2750-4689-af12-84d981c927c5: 'Inspiration thumbnail' # Inspiration thumbnail
+    fbf1838b-6239-49f2-bcf4-c98412813028: 'About me' # About me
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Karima Hočevar'
+  schemaVersion: 5.7.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

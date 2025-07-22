@@ -1,0 +1,35 @@
+columnSuffix: null
+handle: editorContents
+instructions: null
+name: 'Editor contents'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 12d93a50-135a-4e0d-9cef-dadc1209904d # Editor text
+    -
+      __assoc__:
+        -
+          - uid
+          - 9bca6d4c-e414-4fbe-bc05-53d304d14380 # Quote
+    -
+      __assoc__:
+        -
+          - uid
+          - 507d02cd-6d18-491c-a393-b0ed79f2f535 # Highlighted text
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

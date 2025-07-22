@@ -1,0 +1,6 @@
+
+{% for field in entry[field.handle].all()  %}
+    <section class="building-block type-{{ field.type.handle }}">
+        {% include '_matrix/_' ~ field.type.handle %}
+    </section>
+{% endfor %}

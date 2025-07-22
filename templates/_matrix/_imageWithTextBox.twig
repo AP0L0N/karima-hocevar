@@ -1,0 +1,44 @@
+<div class="image-with-text-box image-side-{{ field.imageSide }} {{ field.fixateImageOnTop ? 'fixate-image-on-top' : '' }}">
+    <div class="container">
+        <div class="box-content__wrapper">
+            <div class="main-heading d-none d-xl-block">
+                {% if field.fixateImageOnTop %}
+                    <h1>{{ field.heading }}</h1>
+                {% else %}
+                    <h2>{{ field.heading }}</h2>
+                {% endif %}
+            </div>
+    
+            <div class="box-content">
+                <div class="box-content__outer-wrapper">
+                    <div class="box-content__image">
+                        {% include '_matrix/_images' with {
+                            images: field.images.one(),
+                            transform: 'imageWithTextBox',
+                            mobileTransform: 'imageWithTextBox'
+                        } %}
+                    </div>
+                    <div class="box-content__inner-wrapper">
+                        <div class="box-content__contents-wrapper">
+                            <div class="main-heading d-xl-none">
+                                <h2>{{ field.heading }}</h2>
+                            </div>
+
+                            <div class="box-content__heading">
+                                <h3>{{ field.boxHeading }}</h3>
+                            </div>
+            
+                            <div class="box-content__text">
+                                {{ field.description | raw }}
+                            </div>
+                        </div>
+        
+                        {% include '_matrix/_actions' with {
+                            actions: field.actions
+                        } %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

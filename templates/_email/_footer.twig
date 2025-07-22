@@ -1,0 +1,26 @@
+<table align="center" cellpadding="0" cellspacing="0" border="0" style="padding-bottom: 40px;">
+    <tr>
+        <td style="padding-top: 40px;padding-bottom: 20px;text-align: center;" colspan="3">
+            <a href="{{ getenv('INFO_EMAIL') }}" style="text-decoration: none;padding: 0 10px;">
+                <img src="{{ getenv('PRIMARY_SITE_URL') }}/assets/img/email-email-icon.png" alt="">
+            </a>
+            <a href="https://www.facebook.com/p/Karima-Valentina-Hocevar-100069782840551/" style="text-decoration: none;padding: 0 10px;">
+                <img src="{{ getenv('PRIMARY_SITE_URL') }}/assets/img/email-facebook-icon.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/karimas_inspirations/" style="text-decoration: none;padding: 0 10px;">
+                <img src="{{ getenv('PRIMARY_SITE_URL') }}/assets/img/email-instagram-icon.png" alt="">
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{{ url('/terms-of-use') }}" style="color: #534F4E;text-decoration: none;font-size: 16px;padding: 0 10px;">{{ "Terms of use" | t }}</a>   
+        </td>
+        <td>
+            |
+        </td>
+        <td>
+            <a href="{{ url('/privacy-policy') }}" style="color: #534F4E;text-decoration: none;font-size: 16px;padding: 0 10px;">{{ "Privacy Policy" | t }}</a>
+        </td>
+    </tr>
+</table>

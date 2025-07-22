@@ -1,0 +1,213 @@
+color: yellow
+fieldLayouts:
+  1a8a47db-426d-4bda-803a-f1c753fc16ba:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 73a7162d-b07e-405d-be78-96423e43ca89 # Images
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1b6f67c-4169-4740-8a7f-0553380bc446
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T00:12:01+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: shortDescription
+            includeInCards: false
+            instructions: null
+            label: 'Short description'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49e3e828-6795-49c5-a82b-3360a0b3664d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eca88837-37fe-4366-9c04-3b186a4046b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
+            handle: requirements
+            includeInCards: false
+            instructions: null
+            label: Requirements
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dffe5daa-5f43-4e4c-bde7-1f63fafb21af
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 84aee63b-202b-4dea-8359-9ae287d08930 # Date
+            handle: dateFrom
+            includeInCards: false
+            instructions: null
+            label: 'Date from'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 50fd66aa-669e-462b-bfb3-183483ca7f53
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 84aee63b-202b-4dea-8359-9ae287d08930 # Date
+            handle: dateTo
+            includeInCards: false
+            instructions: null
+            label: 'Date to'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3699bcd1-9095-4053-972b-820dc7fdd9fb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T01:19:19+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: dateExtraNotes
+            includeInCards: false
+            instructions: null
+            label: 'Date extra notes'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee77a16c-2740-4126-b391-d88c9f4ff060
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 84aee63b-202b-4dea-8359-9ae287d08930 # Date
+            handle: registrationsOpenUntil
+            includeInCards: false
+            instructions: null
+            label: 'Registrations open until'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c6ea490e-ad7d-401f-b119-1404e146ac0e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: price
+            includeInCards: false
+            instructions: null
+            label: Price
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: daaa5d42-b397-4793-8d5e-25ada16deeb1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T01:22:09+00:00'
+            elementCondition: null
+            fieldUid: 75968ea4-3e1b-46d8-86ef-1757f6d6cee8 # Lightswitch
+            handle: eventIsFree
+            includeInCards: false
+            instructions: null
+            label: 'Event is free'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6cbe1a93-eb4b-48f0-b47c-fc314d657898
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T23:56:46+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: trainingPlace
+            includeInCards: false
+            instructions: null
+            label: 'Training place'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 59560f2d-bf2a-4a28-9c90-837018f49967
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T00:12:01+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: eventAuthor
+            includeInCards: false
+            instructions: null
+            label: 'Event author'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e41c5b3-e535-4aa7-a808-ad4cf9b22978
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b41167de-18f7-402d-bd71-8a052527debe
+        userCondition: null
+handle: eventContent
+hasTitleField: false
+icon: calendar-days
+name: 'Event content'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

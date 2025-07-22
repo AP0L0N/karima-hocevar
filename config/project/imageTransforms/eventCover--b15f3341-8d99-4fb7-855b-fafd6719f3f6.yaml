@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: eventCover
+height: null
+interlace: none
+mode: crop
+name: 'Event cover'
+position: center-center
+quality: 100
+upscale: false
+width: 1800

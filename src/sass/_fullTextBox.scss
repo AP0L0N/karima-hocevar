@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+.full-text-box {
+    background-color: #FDF5F3;
+    margin: 72px 0;
+    position: relative;
+    overflow: hidden;
+
+    @include media-breakpoint-up(lg) {
+        margin: 145px 0;
+    }
+
+    .background-image-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+
+        img {
+            display: block;
+        }
+
+        &.left {
+            left: 0;
+            transform: translateX(-50%);
+        }
+
+        &.right {
+            right: 0;
+            transform: translateX(50%);
+        }
+    }
+
+    .full-text-box__wrapper {
+        position: relative;
+        z-index: 3;
+        padding: 60px 6px 50px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 120px 0 100px;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            max-width: 727px;
+            text-wrap: balance;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 49px;
+            }
+        }
+
+        .full-text-box__text {
+            
+            @include media-breakpoint-up(lg) {
+                padding-left: 53px;
+            }
+
+            p {
+                margin-bottom: 10px;
+                color: #605C5A;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

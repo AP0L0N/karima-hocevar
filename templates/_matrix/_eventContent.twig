@@ -1,0 +1,244 @@
+{% set eventContent = entry.buildingBlocks.all() | filter(block => block.type == 'eventContent') | first %}
+
+{% if eventContent %}
+<div class="event-content">
+
+    <div class="hero-banner">
+        <div class="container position-relative">
+            <div class="hero-banner__content">
+                <div class="breadcrumbs">
+                    <a href="/events">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                            <path d="M8.57233 9.4991L12.4911 13.4179L11.3717 14.5373L6.3335 9.4991L11.3717 4.46094L12.4911 5.58035L8.57233 9.4991Z" fill="#9C9994"/>
+                        </svg>
+                        <span>{{ "Events" | t }}</span>
+                    </a>
+                </div>
+
+                <p class="super-title">{{ "Event" | t }}</p>
+                <h1>{{ entry.title }}</h1>
+    
+                {% if eventContent.registrationsOpenUntil|date('U') > now|date('U') %}
+                <div class="actions">
+                    <a href="#eventRegistrationForm" class="btn btn-primary">
+                        <span>{{ "Register now" | t }}</span>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+    
+            {% if eventContent.images.one() %}
+                <div class="hero-banner__image">
+                    {% include '_matrix/_images' with {
+                        images: eventContent.images.one(),
+                        transform: 'eventCover',
+                        mobileTransform: 'eventCoverMobile'
+                    } %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="abount-the-event">
+        <div class="container">
+            <div class="abount-the-event__wrapper">
+                <div class="abount-the-event__wrapper__content">
+                
+                    <h2>{{ "About the event" | t }}</h2>
+                    <div class="description">
+                        {{ eventContent.description | raw }}
+                    </div>
+    
+                    {% if eventContent.requirements is not empty %}
+                        <h3>{{ "Requirements" | t }}</h3>
+                        <div class="description">
+                            {{ eventContent.requirements | raw }}
+                        </div>
+                    {% endif %}
+    
+                    <h3>{{ "Date" | t }}</h3>
+                    <div class="dates">
+                        <p class="date">
+                            {% if eventContent.dateTo and eventContent.dateFrom != eventContent.dateTo %}
+                                {% if eventContent.dateFrom|date('M') == eventContent.dateTo|date('M') %}
+                                    {{ eventContent.dateFrom|date('d') }}-{{ eventContent.dateTo|date('d') }} {{ eventContent.dateTo|date('F Y') }}
+                                {% else %}
+                                    {{ eventContent.dateFrom|date('d. M') }} - {{ eventContent.dateTo|date('d. M Y') }}
+                                {% endif %}
+                            {% else %}
+                                {{ eventContent.dateFrom|date('d. M Y') }}
+                            {% endif %}
+                        </p>
+    
+                        <p class="date-extra-notes">{{ eventContent.dateExtraNotes }}</p>
+                    </div>
+    
+                    {% if eventContent.price is not empty or eventContent.eventIsFree %}
+                        <h3>{{ "Price" | t }}</h3>
+                        <div class="price">
+                            {% if eventContent.price is not empty %}
+                                <p class="price-amount">
+                                    {{ "The price of the seminar is" | t }} {{ eventContent.price }}
+                                </p>
+                            {% else %}
+                                <p class="price-amount">{{ "The seminar is free of charge" | t }}</p>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="abount-the-event__wrapper__sidebar">
+                    <div class="abount-the-event__wrapper__sidebar__inner-wrapper">
+                        {% if eventContent.dateFrom is not empty %}
+                            <div class="sidebar-item">
+                                <p class="item-heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M16.5 4.16292H15.5833V3.24626C15.5833 2.74 15.1729 2.32959 14.6667 2.32959C14.1604 2.32959 13.75 2.74 13.75 3.24626V4.16292H8.25V3.24626C8.25 2.74 7.83959 2.32959 7.33333 2.32959C6.82707 2.32959 6.41667 2.74 6.41667 3.24626V4.16292H5.5C3.98122 4.16292 2.75 5.39414 2.75 6.91292V17.9129C2.75 19.4317 3.98122 20.6629 5.5 20.6629H16.5C18.0188 20.6629 19.25 19.4317 19.25 17.9129V6.91292C19.25 5.39414 18.0188 4.16292 16.5 4.16292ZM5.5 5.99626H6.41667V6.91292C6.41667 7.41918 6.82707 7.82959 7.33333 7.82959C7.83959 7.82959 8.25 7.41918 8.25 6.91292V5.99626H13.75V6.91292C13.75 7.41918 14.1604 7.82959 14.6667 7.82959C15.1729 7.82959 15.5833 7.41918 15.5833 6.91292V5.99626H16.5C17.0063 5.99626 17.4167 6.40666 17.4167 6.91292V10.5796H4.58333V6.91292C4.58333 6.40666 4.99374 5.99626 5.5 5.99626ZM16.5 18.8296H5.5C4.99374 18.8296 4.58333 18.4192 4.58333 17.9129V12.4129H17.4167V17.9129C17.4167 18.4192 17.0063 18.8296 16.5 18.8296Z" fill="#C58FAC"/><circle cx="7.33335" cy="15.1667" r="0.916667" fill="#C58FAC"/><path d="M14.6666 14.25H11C10.4937 14.25 10.0833 14.6604 10.0833 15.1667C10.0833 15.6729 10.4937 16.0833 11 16.0833H14.6666C15.1729 16.0833 15.5833 15.6729 15.5833 15.1667C15.5833 14.6604 15.1729 14.25 14.6666 14.25Z" fill="#C58FAC"/></svg>
+                                    <span>{{ "Date" | t }}</span>
+                                </p>
+    
+                                <p class="item-content">
+                                    {% if eventContent.dateTo and eventContent.dateFrom != eventContent.dateTo %}
+                                        {% if eventContent.dateFrom|date('M') == eventContent.dateTo|date('M') %}
+                                            {{ eventContent.dateFrom|date('d') }}-{{ eventContent.dateTo|date('d') }} {{ eventContent.dateTo|date('F Y') }}
+                                        {% else %}
+                                            {{ eventContent.dateFrom|date('d. M') }} - {{ eventContent.dateTo|date('d. M Y') }}
+                                        {% endif %}
+                                    {% else %}
+                                        {{ eventContent.dateFrom|date('d. M Y') }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                        {% endif %}
+    
+                        {% if eventContent.trainingPlace is not empty %}
+                            <div class="sidebar-item">
+                                <p class="item-heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2.32959C6.97804 2.32959 3.7067 5.56853 3.66669 9.58996C3.66669 14.6129 10.1292 20.2046 10.4042 20.4429C10.7472 20.7363 11.2528 20.7363 11.5959 20.4429C11.9167 20.2046 18.3334 14.6129 18.3334 9.58959C18.2931 5.56817 15.0216 2.32939 11 2.32959ZM11 18.5088C9.46919 17.0513 5.50002 13.0088 5.50002 9.58959C5.50002 6.55202 7.96246 4.08959 11 4.08959C14.0376 4.08959 16.5 6.55202 16.5 9.58959C16.5 12.9813 12.5309 17.0513 11 18.5088Z" fill="#C58FAC"/><path d="M11 5.99609C9.22811 5.99609 7.79169 7.43251 7.79169 9.20443C7.79169 10.9763 9.22811 12.4128 11 12.4128C12.7719 12.4128 14.2084 10.9763 14.2084 9.20443C14.2084 7.43251 12.7719 5.99609 11 5.99609ZM11 10.5794C10.2406 10.5794 9.62502 9.96382 9.62502 9.20443C9.62502 8.44504 10.2406 7.82943 11 7.82943C11.7594 7.82943 12.375 8.44504 12.375 9.20443C12.375 9.96382 11.7594 10.5794 11 10.5794Z" fill="#C58FAC"/></svg>
+                                    <span>{{ "Training place" | t }}</span>
+                                </p>
+                                <p class="item-content">
+                                    {{ eventContent.trainingPlace }}
+                                </p>
+                            </div>
+                        {% endif %}
+    
+                        {% if eventContent.eventAuthor is not empty %}
+                            <div class="sidebar-item">
+                                <p class="item-heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 10.5833C13.0251 10.5833 14.6667 8.94171 14.6667 6.91667C14.6667 4.89162 13.0251 3.25 11 3.25C8.975 3.25 7.33337 4.89162 7.33337 6.91667C7.33337 8.94171 8.975 10.5833 11 10.5833ZM11 5.08333C12.0126 5.08333 12.8334 5.90414 12.8334 6.91667C12.8334 7.92919 12.0126 8.75 11 8.75C9.98752 8.75 9.16671 7.92919 9.16671 6.91667C9.16671 5.90414 9.98752 5.08333 11 5.08333Z" fill="#C58FAC"/><path d="M11 12.4165C7.45621 12.4165 4.58337 15.2893 4.58337 18.8332C4.58337 19.3394 4.99378 19.7498 5.50004 19.7498C6.0063 19.7498 6.41671 19.3394 6.41671 18.8332C6.41671 16.3019 8.46874 14.2498 11 14.2498C13.5313 14.2498 15.5834 16.3019 15.5834 18.8332C15.5834 19.3394 15.9938 19.7498 16.5 19.7498C17.0063 19.7498 17.4167 19.3394 17.4167 18.8332C17.4167 15.2893 14.5439 12.4165 11 12.4165Z" fill="#C58FAC"/></svg>
+                                    <span>{{ "Author" }}</span>
+                                </p>
+    
+                                <p class="item-content">
+                                    {{ eventContent.eventAuthor }}
+                                </p>
+                            </div>
+                        {% endif %}
+    
+                        {% if eventContent.price is not empty %}
+                            <div class="sidebar-item">
+                                <p class="item-heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 19.4941C6.30869 19.4941 2.50586 15.6913 2.50586 11C2.50586 6.30869 6.30869 2.50586 11 2.50586C15.6913 2.50586 19.4941 6.30869 19.4941 11C19.4941 15.6913 15.6913 19.4941 11 19.4941ZM11 17.7953C14.7527 17.7953 17.7953 14.7527 17.7953 11C17.7953 7.24729 14.7527 4.20469 11 4.20469C7.24729 4.20469 4.20469 7.24729 4.20469 11C4.20469 14.7527 7.24729 17.7953 11 17.7953ZM9.34364 10.1506H13.5482V11.8494H9.34364C9.57808 12.9987 10.6993 13.7402 11.8486 13.5066C12.1977 13.4353 12.5238 13.2773 12.7957 13.0471L14.2397 14.0095C12.8118 15.5639 10.3935 15.6667 8.83909 14.2388C8.15956 13.6145 7.72891 12.7659 7.62613 11.8494H6.75293V10.1506H7.62528C7.85972 8.05253 9.75051 6.54143 11.8486 6.77586C12.7659 6.87864 13.6162 7.31015 14.2405 7.99053L12.7957 8.95291C11.9004 8.19523 10.56 8.30736 9.80317 9.20349C9.57298 9.4753 9.41499 9.80148 9.34364 10.1506Z" fill="#C58FAC"/></svg>
+                                    <span>{{ "Price" | t }}</span>
+                                </p>
+                                <p class="item-content">
+                                    {{ eventContent.price }}
+                                </p>
+                            </div>
+                        {% endif %}
+
+                                
+                        {% if eventContent.registrationsOpenUntil|date('U') > now|date('U') %}
+                            <div class="actions">
+                                <a href="#eventRegistrationForm" class="btn btn-primary w-100">
+                                    <span>{{ "Register now" | t }}</span>
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if eventContent.registrationsOpenUntil|date('U') > now|date('U') %}
+    <div class="registration-form">
+        <div class="container">
+            <div class="registration-form__wrapper">
+               
+                <div class="registration-form__wrapper__content">
+                    <h2>{{ "Register" | t }}</h2>
+                    <p>{{ "Fill out the form and receive all the instructions and documentation required for registration to your email address." | t }}</p> 
+                </div>
+
+                <div class="registration-form__wrapper__form">
+                    <form id="eventRegistrationForm" onsubmit="event.preventDefault();">
+                        <input type="hidden" name="eventTitle" value="{{ entry.title }}">
+                        <input type="hidden" name="eventId" value="{{ entry.id }}">
+
+                        <div class="form-group">
+                            <label for="name">{{ "NAME AND SURNAME" | t }}</label>
+                            <input type="text" id="name" name="name" placeholder="{{ "Your name and surname" | t }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">{{ "EMAIL" | t }}</label>
+                            <input type="email" id="email" name="email" placeholder="{{ "Your email" | t }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">{{ "PHONE NUMBER" | t }}</label>
+                            <input type="tel" id="phone" name="phone" placeholder="{{ "Your phone number" | t }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profession">{{ "PROFESSION" | t }}</label>
+                            <input type="text" id="profession" name="profession" placeholder="{{ "Your profession / occupation" | t }}">
+                        </div>
+
+                        <button class="g-recaptcha btn btn-secondary"
+                                data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"
+                                data-callback='registerEvent'
+                                data-action='submit'>
+                                <span>{{ "Register" | t }}</span>
+                        </button>
+                        
+                        <div class="alert alert-success d-none align-items-center mt-4" role="alert" id="event-registration-success">
+                            <div>
+                                {{ "You ve successfully registered for the event!" | t }}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.google.com/recaptcha/api.js?sitekey={{ getenv('RECAPTCHA_SITE_KEY') }}" async defer></script>
+
+    <script>
+        function registerEvent(token) {
+            const form = document.getElementById('eventRegistrationForm');
+            const formData = new FormData(form);
+            formData.append('token', token);
+
+            fetch('/event-registration', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const eventRegistrationSuccess = document.getElementById('event-registration-success');
+                eventRegistrationSuccess.classList.remove('d-none');
+                eventRegistrationSuccess.classList.add('d-flex');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+
+    {% endif %}
+</div>
+{% endif %}

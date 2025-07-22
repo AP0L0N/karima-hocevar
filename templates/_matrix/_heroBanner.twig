@@ -1,0 +1,22 @@
+<div class="hero-banner">
+    <div class="container">
+        <div class="hero-banner__content">
+            <h1>{{ field.heading }}</h1>
+            <div class="description">{{ field.description | raw }}</div>
+
+            {% include '_matrix/_actions' with {
+                actions: field.actions
+            } %}
+        </div>
+
+        {% if field.images.one() %}
+            <div class="hero-banner__image">
+                {% include '_matrix/_images' with {
+                    images: field.images.one(),
+                    transform: 'heroBannerDesktop',
+                    mobileTransform: 'heroBannerMobile'
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

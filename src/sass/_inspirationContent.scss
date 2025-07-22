@@ -1,0 +1,238 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+
+.inspiration-content {
+    margin: 12px 0 100px;
+    
+    .container {
+
+        .inspiration-content__wrapper {
+
+            .breadcrumb {
+
+                a {
+                    color: $gray-75;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 3px;
+                    font-size: 16px;
+                    margin-bottom: 30px;
+
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: 40px;
+                        gap: 7px;
+                    }
+
+                    svg {
+                        
+                    }
+                    span {
+                        
+                    }
+                }
+            }
+
+            &__header {
+                max-width: 840px;
+                margin: 0 auto 25px;
+
+                @include media-breakpoint-up(lg) {
+                    margin: 0 auto 54px;
+                }
+
+                .posted-on {
+                    color: $gray-75;
+                    text-align: center;
+                    font-family: $font-family-raleway;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: 32px;
+                    }
+                }
+
+                h1 {
+                    color: #000;
+                    text-align: center;
+                    font-family: $font-family-raleway;
+                    font-size: 38px;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 56px;
+                        margin-bottom: 31px;
+                    }
+                }
+
+                .sub-title {
+                    color: $default;
+                    text-align: center;
+                    font-family: $font-sofia-extralight;
+                    font-size: 22px;
+                    font-weight: 400;
+                }
+            }
+
+            &__image {
+                margin-bottom: 40px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 96px;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            &__content {
+                max-width: 840px;
+                margin: 0 auto;
+
+                &__text {
+                    color: $default;
+                    font-family: $font-sofia-ultralight;
+                    font-size: 18px;
+                    font-weight: 300;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 20px;
+                    }
+
+                    h2 {
+                        color: #000;
+                        font-family: $font-sofia-regular;
+                        font-size: 28px;
+                        font-weight: 400;
+                        margin-bottom: 22px;
+                        margin-top: 40px;
+
+                        @include media-breakpoint-up(lg) {
+                            font-size: 36px;
+                        }
+                    }
+
+                    h3 {
+                        color: #000;
+                        font-family: $font-sofia-regular;
+                        font-size: 21px;
+                        font-weight: 400;
+                        margin-bottom: 20px;
+                        margin-top: 45px;
+
+                        @include media-breakpoint-up(lg) {
+                            font-size: 28px;
+                        }
+                    }
+                }
+
+                &__quote {
+                    position: relative;
+                    margin-top: 46px;
+                    margin-bottom: 40px;
+
+                    svg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transform: translate(-110%, -77%);
+                        display: none;
+
+                        @include media-breakpoint-up(lg) {
+                            display: block;
+                            transform: translate(-110%, -77%);
+                        }
+                    }
+
+                    .quote {
+                        color: #000;
+                        font-family: $font-sofia-regular;
+                        font-size: 21px;
+                        font-weight: 400;
+
+                        @include media-breakpoint-up(lg) {
+                            font-size: 28px;
+                        }
+                    }
+
+                    .author {
+                        color: $default;
+                        font-family: $font-sofia-ultralight;
+                        font-size: 13px;
+                        font-weight: 400;
+
+                        @include media-breakpoint-up(lg) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                &__highlighted-text {
+                    position: relative;
+                    margin: 60px 0 36px;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: -23px;
+                        left: 0;
+                        width: 48px;
+                        height: 1px;
+                        background-color: $green;
+                    }
+
+                    .highlighted-text {
+                        color: #000;
+                        font-family: $font-sofia-regular;
+                        font-size: 21px;
+                        font-weight: 400;
+
+                        @include media-breakpoint-up(lg) {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+
+            .share-icons {
+                &__wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+
+                    a {
+                        width: 48px;
+                        height: 48px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: thin solid $primary;
+                        border-radius: 50%;
+
+                        svg {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.list-of-inspirations {
+
+    &__wrapper {
+
+        h2 {
+            color: #000;
+            font-family: $font-family-raleway;
+            font-weight: 500;
+        }
+    }
+}

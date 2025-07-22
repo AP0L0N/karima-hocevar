@@ -1,0 +1,152 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+.event-card {
+
+    .event-card__link {
+        display: block;
+        text-decoration: none;
+        padding: 19px 16px;
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        gap: 30px;
+        transition: box-shadow 1s ease-in-out;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-up(xl) {
+            flex-wrap: nowrap;
+            gap: 40px;
+            padding: 21px 24px;
+        }
+        
+        &:hover {
+            box-shadow: none;
+            outline: 3px solid $primary;
+            transition: box-shadow 0s ease-in-out;
+        }
+
+        .event-card__link__image {
+
+            @include media-breakpoint-up(xl) {
+                flex-shrink: 0;
+            }
+
+            .images-wrapper {
+                max-width: 376px;
+                aspect-ratio: 376/276;
+                overflow: hidden;
+                border-radius: 30px;
+                box-shadow: 4px 16px 16px 0px rgba(83, 79, 78, 0.16);
+                width: 100%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transform: scale(1.25);
+                }
+
+                .desktop-image {
+                    display: none !important;
+                }
+
+                .mobile-image {
+                    display: block !important;
+                }
+            }
+        }
+
+        .event-card__link__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+
+            @include media-breakpoint-up(xl) {
+                gap: 58px;
+            }
+
+            &__inner-wrapper {
+
+                .event-card__link__content__super-title {
+                    color: $gray-24;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 1.12px;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+    
+                .event-card__link__content__title {
+                    font-weight: 600;
+                    margin-bottom: 15px;
+
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: 19px;
+                    }
+                }
+    
+                .event-card__link__content__short-description {
+                    color: $default;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 28px;
+                }
+            }
+
+            .event-card__link__content__meta {
+                display: flex;
+                column-gap: 15px;
+                row-gap: 15px;
+                border-top: thin solid #CFCCC6;
+                width: 100%;
+                padding-top: 14px;
+                flex-wrap: wrap;
+
+                @include media-breakpoint-up(xl) {
+                    column-gap: 25px;
+                    flex-wrap: nowrap;
+                }
+
+                > div {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                span {
+                    color: $default;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 28px;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 18px;
+                    }
+                }
+                
+                .event-card__link__content__meta__date {
+
+                }
+
+                .event-card__link__content__meta__training-place {
+
+                }
+
+                .event-card__link__content__meta__event-author {
+
+                }
+
+                .event-card__link__content__meta__price {
+
+                }
+            }
+        }
+    }
+}

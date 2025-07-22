@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 6674e180-5fc8-4991-ba5e-add100694daa # Newsletter subscriber
+handle: newsletterSubscribers
+maxAuthors: 1
+name: 'Newsletter subscribers'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  0645712b-5f0e-4ede-b288-136194b2d349: # Karima Hočevar
+    enabledByDefault: true
+    hasUrls: true
+    template: newsletter-subscribers/_entry.twig
+    uriFormat: 'newsletter-subscribers/{slug}'
+type: channel

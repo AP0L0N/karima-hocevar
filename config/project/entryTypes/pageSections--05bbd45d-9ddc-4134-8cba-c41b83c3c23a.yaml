@@ -1,0 +1,91 @@
+color: green
+fieldLayouts:
+  cec1e7c9-1562-4d1c-aa77-dd5ae2d09d42:
+    cardView:
+      - slug
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-03-13T23:23:56+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d9f21ca0-3d73-4f3f-adfa-2e6812cd0b38
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T20:45:35+00:00'
+            elementCondition: null
+            fieldUid: 8cd1b229-e07c-46b6-8480-780c5542757d # Building blocks
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 438d9de0-7df1-456e-9382-f2c3bd5ea318
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 58b8e12c-45b4-46d7-9cf6-b215ce153d76
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-13T21:31:06+00:00'
+            elementCondition: null
+            fieldUid: 928002ce-655c-46bc-97ca-19c15ed7aebc # SEO Settings
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3da30d7e-ecb1-4689-b813-cf5e010cefbc
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 81803d82-9b39-42fa-854e-6da314786d08
+        userCondition: null
+handle: pageSections
+hasTitleField: true
+icon: shapes
+name: 'Page sections'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

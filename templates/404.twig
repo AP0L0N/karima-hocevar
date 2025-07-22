@@ -1,0 +1,24 @@
+
+
+{% extends '_layouts/main' %}
+
+{% block content %}
+    <section class="page-wrapper" id="page404">
+
+        <div class="image-wrapper">
+            <div class="image">
+                <img src="/assets/img/image-404.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="container">
+                <h1>{{ "Looks like you're lost." | t }}</h1>
+                <p>{{ " Sorry, but the page you were looking for could not be found. You can return to our homepage, or contact us if you can't find what you're looking for. Error code: 404." | t }}</p>
+                <a href="/" class="btn btn-secondary"><span>{{ "Back to home page" | t }}</span></a>
+            </div>
+        </div>
+
+        
+    </section>
+{% endblock %}

@@ -1,0 +1,187 @@
+@import 'variables';
+
+#tkcb {
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 -8px 12px 0 rgba(255, 255, 255, 0.2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 32px;
+    width: 100%;
+    font-weight: 400;
+    border-top: 1px solid $primary;
+    line-height: 1.6;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #tkcb {
+        padding: 32px 10px;
+    }
+}
+
+.tkcb-inside .tkcb-title {
+    color: #212529;
+    font-size: 36px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .tkcb-inside .tkcb-title {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .tkcb-inside .tkcb-title {
+        font-size: 30px;
+    }
+}
+
+.tkcb-inside a {
+    color: #3E4152;
+    text-decoration: underline;
+}
+
+.tkcb-inside a:hover {
+    //color: $primary;
+    //text-decoration: underline;
+}
+
+.tkcb-inside .tkcb-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 32px 0 0 0;
+}
+
+.tkcb-inside .tkcb-button {
+    color: #fff;
+    min-width: 160px;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 380px) {
+    .tkcb-inside .tkcb-button {
+        min-width: 140px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+.tkcb-inside .tkcb-button:hover {
+    text-decoration: none;
+}
+
+.tkcb-inside .tkcb-button-outline {
+    color: #3E4152;
+    border-color: #3E4152;
+}
+
+.tkcb-inside .tkcb-button-outline:hover {
+    color: $primary;
+    border-color: $primary;
+}
+
+.dark .tkcb-button-outline {
+    --tw-bg-opacity: 1;
+    --tw-shadow-color: #666 !important;
+    border-color: #666;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark .tkcb-button-outline:hover {
+    --tw-bg-opacity: 1;
+    --tw-shadow-color: #666 !important;
+    border-color: #666;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tkcb-inside .tkcb-toggles {
+    margin-bottom: 24px;
+}
+
+.tkcb-inside .tkcb-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.tkcb-inside .tkcb-toggle .tkcb-toggle-input {
+    appearance: none;
+    width: 56px;
+    min-width: 56px;
+    height: 28px;
+    display: inline-block;
+    position: relative;
+    margin-right: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #aaa;
+    top: 0;
+    transition: background-color ease 0.3s;
+}
+
+.tkcb-inside .tkcb-toggle .tkcb-toggle-label {
+    line-height: 24px;
+}
+
+.tkcb-inside .tkcb-toggle .tkcb-toggle-input:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    left: 2px;
+    top: 2px;
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all cubic-bezier(0.3, 0.7, 0.9, 1) 0.1s;
+    z-index: 2;
+}
+
+.tkcb-inside .tkcb-toggle-input:checked {
+    background-color: $primary !important;
+    background-image: none;
+}
+
+.tkcb-inside .tkcb-toggle-input:checked:before {
+    left: 30px;
+}
+
+.tkcb-inside .tkcb-toggle-input:checked:after {
+    display: none;
+}
+
+.tkcb-inside .tkcb-toggle .tkcb-toggle-label:before {
+    display: none;
+    padding-left: 8px;
+}
+
+.tkcb-inside #tkcb-footer a {
+    font-size: 14px;
+}
+
+#tkcb-settings {
+    padding-bottom: 24px;
+}
+
+#tkcb-settings .tkcb-toggle {
+    margin-bottom: 12px;
+    font-size: var(--Body-Sizes-l, 18px);
+}

@@ -1,0 +1,11 @@
+fill: null
+format: jpg
+handle: inspirationThumbnail
+height: null
+interlace: none
+mode: crop
+name: 'Inspiration thumbnail'
+position: center-center
+quality: 80
+upscale: false
+width: 800

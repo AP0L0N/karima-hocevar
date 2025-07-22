@@ -1,0 +1,110 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+header {
+
+    .container {
+
+        .inner-wrapper {
+            padding: 33px 0;
+
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 35px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                gap: 85px;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                @include media-breakpoint-up(lg) {
+                    width: auto;
+                    display: block;
+                }
+
+                a {
+                    display: block;
+                    width: 215px;
+
+                    @include media-breakpoint-up(lg) {
+                        width: 265px;
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .navbar-toggler {
+                    padding: 12px 6px;
+
+                    &.collapsed {
+    
+                        .hamburger-icon {
+                            display: block;
+                        }
+    
+                        .close-icon {
+                            display: none;
+                        }
+                    }
+    
+                    &:not(.collapsed) {
+    
+                        .hamburger-icon {
+                            display: none;
+                        }
+    
+                        .close-icon {
+                            display: block;
+                        }
+                    }
+    
+                    svg {
+    
+                        path {
+                            fill: black;
+                        }
+                    }
+                }
+            }
+
+            .navbar {
+
+                .navbar-nav {
+                    gap: 10px;
+
+                    .nav-item {
+
+                        .nav-link {
+                            color: black;
+                            font-weight: 400;
+                            font-size: $font-size-sm;
+                            line-height: 1.55;
+                            padding: 12px 10px;
+
+                            @media(min-width: 991px) and (max-width: 1200px) {
+                                font-size: 12px;
+                            }
+
+                            @media(min-width: 1200px) and (max-width: 1400px) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

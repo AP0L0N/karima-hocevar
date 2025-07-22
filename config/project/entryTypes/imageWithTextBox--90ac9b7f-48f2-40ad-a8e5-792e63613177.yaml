@@ -1,0 +1,133 @@
+color: yellow
+fieldLayouts:
+  cb085e79-589c-4f6b-8349-919e2ed16faa:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-13T22:14:24+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61d1d186-dff7-4cbd-b901-256e496e4472
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T22:14:24+00:00'
+            elementCondition: null
+            fieldUid: 73a7162d-b07e-405d-be78-96423e43ca89 # Images
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 96585f50-ea7c-47c9-839b-5d02b5dfd8ab
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T22:43:49+00:00'
+            elementCondition: null
+            fieldUid: 3c629f1c-8092-42de-9b94-f4da68628746 # Image side
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b3cf7ba-6a30-467b-8e4d-220f4e2b9105
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-14T02:05:49+00:00'
+            elementCondition: null
+            fieldUid: 75968ea4-3e1b-46d8-86ef-1757f6d6cee8 # Lightswitch
+            handle: fixateImageOnTop
+            includeInCards: false
+            instructions: null
+            label: 'Fixate image on top'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 329bb1a1-e734-46d1-8cb5-c3d843e6e98a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T22:14:24+00:00'
+            elementCondition: null
+            fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
+            handle: boxHeading
+            includeInCards: false
+            instructions: null
+            label: 'Box heading'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5c63454-6cc2-464a-857b-f5eb1ee3d2b2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T22:14:24+00:00'
+            elementCondition: null
+            fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f2d23e1-9a53-4f0f-8982-2bbfc0814ee8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T22:14:24+00:00'
+            elementCondition: null
+            fieldUid: 6c899c98-0e37-4bb5-97df-5b1d53b40281 # Actions
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc438791-5351-42a6-8fe8-98bf5b31a0d8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8240279b-b7ad-4d85-8069-d6481e79c2d2
+        userCondition: null
+handle: imageWithTextBox
+hasTitleField: false
+icon: symbols
+name: 'Image with text box'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

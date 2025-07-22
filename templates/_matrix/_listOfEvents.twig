@@ -1,0 +1,32 @@
+{% set events = field.events.all() | length ? field.events.all() : craft.entries.section('events').orderBy('postDate DESC')
+    .limit(field.listAllEvents ? null : 3)
+    .all() %}
+
+{% if events | length %}
+<div class="list-of-events {{ field is defined and field.listAllEvents ? 'list-all-events' : '' }}">
+    <div class="container">
+        <div class="list-of-events__wrapper">
+
+            <div class="list-of-events__wrapper__heading">
+                {% if field is defined and field.listAllEvents is not defined or field.listAllEvents == false %}
+                    <h2>{{ field.heading is not empty ? field.heading : ("Events" | t) }}</h2>
+                {% else %}
+                    <h1>{{ field.heading is not empty ? field.heading : ("Events" | t) }}</h1>
+                {% endif %}
+
+                {% if field.listAllEvents == false %}
+                    <a href="/events" class="normal-link">
+                        <span>{{ "All events" | t }}</span>
+                    </a>
+                {% endif %}
+            </div>
+
+            <div class="list-of-events__wrapper__list">
+                {% for item in events %}
+                    {% include '_matrix/_eventCard' with item %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

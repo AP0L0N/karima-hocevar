@@ -1,0 +1,101 @@
+@import 'variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+body.homepage {
+
+    .hero-banner {
+
+        .container {
+
+            .hero-banner__content {
+
+                h1 {
+                    color: #E58B76;
+                }
+            }
+        }
+    }
+}
+
+.hero-banner {
+    position: relative;
+    background-color: $gray-f7;
+    overflow: hidden;
+    margin-bottom: 150px;
+
+    .container {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            padding: 0 12px;
+        }
+        
+        .hero-banner__content {
+            padding: 40px 16px;
+            max-width: 580px;
+            position: relative; 
+            z-index: 3;
+
+            @include media-breakpoint-up(lg) {
+                padding: 165px 0 180px;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                color: #4A3936;
+                font-weight: 600;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 40px;
+                }
+            }
+            
+            .description {
+                margin-bottom: 20px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 30px;
+                }
+
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            
+            .actions {
+
+            }
+        }
+
+        .hero-banner__image {
+
+            .images-wrapper {
+
+                @include media-breakpoint-up(lg) {    
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 50%;
+                    bottom: 0;
+                    z-index: 2;
+                }
+
+                img {
+                    display: block;
+                    max-width: 100%;
+                    transform: scaleX(-1);
+
+                    @include media-breakpoint-up(lg) {
+                        max-height: 100%;
+                        max-width: unset;
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}

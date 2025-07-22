@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: inspirations
+instructions: null
+name: Inspirations
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 3
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:bcba9386-e72b-4149-9cad-8d09a8d484f2' # Inspirations
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

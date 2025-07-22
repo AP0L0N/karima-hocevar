@@ -1,0 +1,9 @@
+{% if actions and actions|length %}
+    <div class="actions">
+        {% for action in actions %}
+            <a href="{{ action.linkUrl }}" class="{{ action.style != 'normalLink' ? 'btn btn-' ~ action.style : 'normal-link' }}">
+                <span>{{ action.linkText }}</span>
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}

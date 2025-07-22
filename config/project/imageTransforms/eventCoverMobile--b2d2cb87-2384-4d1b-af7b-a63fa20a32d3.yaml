@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: eventCoverMobile
+height: null
+interlace: none
+mode: crop
+name: 'Event cover - mobile'
+position: center-center
+quality: 100
+upscale: false
+width: 750
