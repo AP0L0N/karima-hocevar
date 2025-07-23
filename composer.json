@@ -2,11 +2,11 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/ckeditor": "^4.6.0",
-    "craftcms/cms": "^5.0.0",
+    "craftcms/ckeditor": "^4.9.0",
+    "craftcms/cms": "^5.8.8",
     "ether/seo": "^5.0.0",
-    "misterbk/mix": "v1.7.2",
-    "verbb/super-table": "^4.0.4",
+    "misterbk/mix": "v1.8.1",
+    "verbb/super-table": "^4.0.5",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

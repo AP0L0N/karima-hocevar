@@ -18,42 +18,42 @@
                         <li class="nav-item">
                             <a 
                                 href="/about-me"
-                                class="nav-link {{ craft.app.request.getSegment(1) == 'about-me' ? 'active' : '' }}"
+                                class="nav-link {{ entry.section.handle == 'aboutMe' ? 'active' : '' }}"
                                 >{{ "About Me" | t }}</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 href="/resonant-touch" 
-                                class="nav-link {{ craft.app.request.getSegment(1) == 'my-work' ? 'active' : '' }}"
+                                class="nav-link {{ entry.section.handle == 'myWork' ? 'active' : '' }}"
                                 >{{ "Resonant Touch" | t }}</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 href="/individual-sessions"
-                                class="nav-link {{ craft.app.request.getSegment(1) == 'embodied-psychodynamic-resonance' ? 'active' : '' }}"
+                                class="nav-link {{ entry.section.handle == 'epr' ? 'active' : '' }}"
                                 >{{ "Individual Sessions" | t }}</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 href="/events"
-                                class="nav-link {{ craft.app.request.getSegment(1) == 'events' or craft.app.request.getSegment(1) == 'event' ? 'active' : '' }}"
+                                class="nav-link {{ entry.section.handle == 'allEvents' or entry.section.handle == 'events' ? 'active' : '' }}"
                                 >{{ "Learning & Training" | t }}</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 href="/inspirations"
-                                class="nav-link {{ craft.app.request.getSegment(1) == 'inspirations' or craft.app.request.getSegment(1) == 'inspiration' ? 'active' : '' }}"
+                                class="nav-link {{ entry.section.handle == 'allInspirations' or entry.section.handle == 'inspirations' ? 'active' : '' }}"
                                 >{{ "Inspirations" | t }}</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
                                 href="/newsletter"
-                                class="nav-link {{ craft.app.request.getSegment(1) == 'newsletter' ? 'active' : '' }}"
+                                class="nav-link {{ entry.section.handle == 'newsletter' ? 'active' : '' }}"
                                 >{{ "Contact" | t }}</a
                             >
                         </li>

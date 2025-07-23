@@ -2,7 +2,6 @@
 @import 'bootstrap/scss/mixins/breakpoints';
 
 .newsletter-signup-form {
-    background-color: $gray-f7;
     padding: 60px 0;
 
     @include media-breakpoint-up(lg) {
@@ -38,7 +37,7 @@
                     margin-bottom: 18px;
 
                     @include media-breakpoint-up(lg) {
-                        font-size: 56px;
+                        font-size: 42px;
                         margin-bottom: 28px;
                     }
                 }

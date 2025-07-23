@@ -11,6 +11,8 @@
 
         {% if field.images.one() %}
             <div class="hero-banner__image">
+                <div class="hero-banner__image-mask"><svg xmlns="http://www.w3.org/2000/svg" width="625" height="639" viewBox="0 0 625 639" fill="none"><path d="M625 0C293.629 7.73159e-06 25 268.629 25 600V639H0V0H625Z" fill="#D9D9D9"/></svg></div>
+
                 {% include '_matrix/_images' with {
                     images: field.images.one(),
                     transform: 'heroBannerDesktop',

@@ -17,7 +17,7 @@
         @include media-breakpoint-up(xl) {
             flex-wrap: nowrap;
             gap: 40px;
-            padding: 21px 24px;
+            padding: 24px 31px;
         }
         
         &:hover {
@@ -47,14 +47,6 @@
                     object-fit: cover;
                     transform: scale(1.25);
                 }
-
-                .desktop-image {
-                    display: none !important;
-                }
-
-                .mobile-image {
-                    display: block !important;
-                }
             }
         }
 
@@ -63,6 +55,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 20px;
+            width: 100%;
 
             @include media-breakpoint-up(xl) {
                 gap: 58px;
@@ -91,11 +84,11 @@
                 }
     
                 .event-card__link__content__short-description {
-                    color: $default;
+                    color: #534F4E;
                     font-size: 16px;
-                    font-style: normal;
                     font-weight: 300;
                     line-height: 28px;
+                    margin-bottom: 0;
                 }
             }
 

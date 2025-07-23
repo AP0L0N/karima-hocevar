@@ -2,7 +2,6 @@
 @import 'bootstrap/scss/mixins/breakpoints';
 
 .full-text-box {
-    background-color: #FDF5F3;
     margin: 72px 0;
     position: relative;
     overflow: hidden;
@@ -11,51 +10,81 @@
         margin: 145px 0;
     }
 
-    .background-image-wrapper {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        z-index: 2;
+    &.themed-background {
+        background-color: #FDF5F3;
 
-        img {
-            display: block;
+        .full-text-box__wrapper {
+            position: relative;
+            z-index: 3;
+            padding: 60px 6px 50px;
+
+            @include media-breakpoint-up(lg) {
+                padding: 120px 65px 100px;
+            }
+
+            h2 {
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 48px;
+                }
+            }
+
+            .full-text-box__text {
+                
+                @include media-breakpoint-up(lg) {
+                    padding-left: 53px;
+                }
+            }
         }
 
-        &.left {
-            left: 0;
-            transform: translateX(-50%);
+        .background-image-wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+    
+            img {
+                display: block;
+            }
+    
+            &.left {
+                left: 0;
+                transform: translateX(-50%);
+            }
+    
+            &.right {
+                right: 0;
+                transform: translateX(50%);
+            }
         }
+    }
 
-        &.right {
-            right: 0;
-            transform: translateX(50%);
+    &:not(.themed-background) {
+     
+        .full-text-box__wrapper {
+            padding: 24px 28px 28px 24px;
+            border-radius: 30px;
+            border: 2px solid #f2d4cd;
+
+            @include media-breakpoint-up(lg) {
+                padding: 45px;
+            }
         }
     }
 
     .full-text-box__wrapper {
-        position: relative;
-        z-index: 3;
-        padding: 60px 6px 50px;
-
-        @include media-breakpoint-up(lg) {
-            padding: 120px 0 100px;
-        }
 
         h2 {
-            margin-bottom: 25px;
+            margin-bottom: 18px;
             max-width: 727px;
             text-wrap: balance;
 
             @include media-breakpoint-up(lg) {
-                margin-bottom: 49px;
+                margin-bottom: 28px;
             }
         }
 
         .full-text-box__text {
-            
-            @include media-breakpoint-up(lg) {
-                padding-left: 53px;
-            }
 
             p {
                 margin-bottom: 10px;
@@ -63,6 +92,21 @@
 
                 @include media-breakpoint-up(lg) {
                     margin-bottom: 20px;
+                }
+            }
+
+            ul {
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                li {
+                    margin-bottom: 12px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
 

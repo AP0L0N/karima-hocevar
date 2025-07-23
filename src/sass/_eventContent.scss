@@ -4,7 +4,7 @@
 .event-content {
 
     .hero-banner {
-        padding-top: 45px;
+        padding-top: 12px;
     
         @include media-breakpoint-up(lg) {
             padding-top: 0;
@@ -22,12 +22,15 @@
             }
 
             .breadcrumbs {
-                position: absolute;
-                top: -33px;
-                left: 16px;
+                margin-bottom: 45px;
+                position: relative;
+                left: -5px;
 
                 @include media-breakpoint-up(lg) {
+                    position: absolute;
+                    top: 33px;
                     left: 0;
+                    margin-bottom: 0;
                 }
 
                 a {
@@ -36,9 +39,12 @@
                     display: flex;
                     align-items: center;
                     gap: 3px;
+                    width: fit-content;
+                    font-size: 14px;
 
                     @include media-breakpoint-up(lg) {
                         gap: 7px;
+                        font-size: 18px;
                     }
 
                     svg {
@@ -67,7 +73,8 @@
             }
 
             h1 {
-                
+               margin-bottom: 0 !important; 
+               font-weight: 600 !important;
             }
 
             .actions {
@@ -88,6 +95,13 @@
 
         &__image {
             
+            .hero-banner__image-mask {
+                display: none;
+
+                @include media-breakpoint-up(lg) {
+                    display: block;
+                }
+            }
         }
     }
 

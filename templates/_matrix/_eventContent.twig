@@ -4,7 +4,7 @@
 <div class="event-content">
 
     <div class="hero-banner">
-        <div class="container position-relative">
+        <div class="container">
             <div class="hero-banner__content">
                 <div class="breadcrumbs">
                     <a href="/events">
@@ -16,19 +16,22 @@
                 </div>
 
                 <p class="super-title">{{ "Event" | t }}</p>
+
                 <h1>{{ entry.title }}</h1>
     
                 {% if eventContent.registrationsOpenUntil|date('U') > now|date('U') %}
-                <div class="actions">
-                    <a href="#eventRegistrationForm" class="btn btn-primary">
-                        <span>{{ "Register now" | t }}</span>
-                    </a>
-                </div>
+                    <div class="actions">
+                        <a href="#eventRegistrationForm" class="btn btn-primary">
+                            <span>{{ "Register now" | t }}</span>
+                        </a>
+                    </div>
                 {% endif %}
             </div>
     
             {% if eventContent.images.one() %}
                 <div class="hero-banner__image">
+                    <div class="hero-banner__image-mask"><svg xmlns="http://www.w3.org/2000/svg" width="226" height="410" viewBox="0 0 226 410" fill="none"><path d="M226 0C112.782 0 21 91.7816 21 205C21 318.218 112.782 410 226 410H0V0H226Z" fill="#CACACA"/></svg></div>
+
                     {% include '_matrix/_images' with {
                         images: eventContent.images.one(),
                         transform: 'eventCover',

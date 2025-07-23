@@ -1,33 +1,36 @@
 <div class="inspiration-content">
 
-    <div class="container">
-        <div class="inspiration-content__wrapper">
-            <div class="breadcrumb">
-                <a href="/inspiration">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-                        <path d="M8.57282 9.4991L12.4916 13.4179L11.3722 14.5373L6.33398 9.4991L11.3722 4.46094L12.4916 5.58035L8.57282 9.4991Z" fill="#9C9994"/>
-                    </svg>
-                    <span>{{ "Inspiration" | t }}</span>
-                </a>
+    <div class="hero-banner">
+        <div class="container">
+            <div class="hero-banner__content">
+                <div class="breadcrumbs">
+                    <a href="/inspirations">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                            <path d="M8.57233 9.4991L12.4911 13.4179L11.3717 14.5373L6.3335 9.4991L11.3717 4.46094L12.4911 5.58035L8.57233 9.4991Z" fill="#9C9994"/>
+                        </svg>
+                        <span>{{ "Inspirations" | t }}</span>
+                    </a>
+                </div>
+
+                <p class="super-title">{{ "Posted on: " | t }} {{ field.postDate | date("F d, Y") }}</p>
+
+                <h1>{{ entry.title }}</h1>
+
+                {% if field.subTitle is not empty %}
+                    <p class="sub-title">{{ field.subTitle }}</p>
+                {% endif %}
             </div>
-
-            <div class="inspiration-content__wrapper__header">
-
-                <p class="posted-on">{{ "Posted on: " | t }} {{ field.postDate | date("F d, Y") }}</p>
-
-                <h1>
-                    {{ entry.title }}
-                </h1>
-
-                <p class="sub-title">{{ field.subTitle }}</p>
-            </div>
-
+    
             {% if field.image.one() %}
-                <div class="inspiration-content__wrapper__image">
+                <div class="hero-banner__image">
                     <img src="{{ field.image.one().getUrl('inspirationCover') }}" alt="{{ field.image.one().alt }}">
                 </div>
             {% endif %}
+        </div>
+    </div>
 
+    <div class="inspiration-content__wrapper">
+        <div class="container">
             <div class="inspiration-content__wrapper__content">
                 {% for content in field.editorContents.all() %}
                     {% if content.type == 'editorText' %}
@@ -38,8 +41,8 @@
 
                     {% if content.type == 'quote' %}
                         <div class="inspiration-content__wrapper__content__quote">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="113" viewBox="0 0 40 113" fill="none">
-                                <path d="M5.63833 110.869C3.92167 109.046 3 107.001 3 103.686C3 97.8524 7.095 92.6241 13.05 90.0391L14.5383 92.3357C8.98 95.3424 7.89333 99.2441 7.46 101.704C8.355 101.241 9.52667 101.079 10.675 101.186C13.6817 101.464 16.0517 103.932 16.0517 107.001C16.0517 110.222 13.44 112.834 10.2183 112.834C8.43 112.834 6.72 112.017 5.63833 110.869ZM22.305 110.869C20.5883 109.046 19.6667 107.001 19.6667 103.686C19.6667 97.8524 23.7617 92.6241 29.7167 90.0391L31.205 92.3357C25.6467 95.3424 24.56 99.2441 24.1267 101.704C25.0217 101.241 26.1933 101.079 27.3417 101.186C30.3483 101.464 32.7183 103.932 32.7183 107.001C32.7183 110.222 30.1067 112.834 26.885 112.834C25.0967 112.834 23.3867 112.017 22.305 110.869Z" fill="#C58FAC"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23" fill="none">
+                                <path d="M2.63833 20.8691C0.921667 19.0457 0 17.0007 0 13.6857C0 7.8524 4.095 2.62406 10.05 0.0390625L11.5383 2.33573C5.98 5.3424 4.89333 9.24406 4.46 11.7041C5.355 11.2407 6.52667 11.0791 7.675 11.1857C10.6817 11.4641 13.0517 13.9324 13.0517 17.0007C13.0517 20.2224 10.44 22.8341 7.21833 22.8341C5.43 22.8341 3.72 22.0174 2.63833 20.8691ZM19.305 20.8691C17.5883 19.0457 16.6667 17.0007 16.6667 13.6857C16.6667 7.8524 20.7617 2.62406 26.7167 0.0390625L28.205 2.33573C22.6467 5.3424 21.56 9.24406 21.1267 11.7041C22.0217 11.2407 23.1933 11.0791 24.3417 11.1857C27.3483 11.4641 29.7183 13.9324 29.7183 17.0007C29.7183 20.2224 27.1067 22.8341 23.885 22.8341C22.0967 22.8341 20.3867 22.0174 19.305 20.8691Z" fill="#E58B76"/>
                             </svg>
                             <p class="quote">{{ content.quote }}</p>
                             <p class="author">— {{ content.authorName }}</p>

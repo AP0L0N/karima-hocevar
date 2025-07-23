@@ -1,6 +1,6 @@
 <footer>
 
-    {% if entry is not defined or (entry is defined and entry.section.handle != 'events') %}
+    {% if entry is not defined or (entry is defined and entry.section.handle not in ['events', 'newsletter']) %}
     <div class="stay-up-to-date">
         <div class="container">
             <div class="stay-up-to-date__wrapper">

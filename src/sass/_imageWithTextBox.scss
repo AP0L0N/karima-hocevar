@@ -71,7 +71,7 @@
         .box-content__wrapper {
 
             @include media-breakpoint-up(xl) {
-                padding: 0 33px;
+                padding: 0 65px;
             }
 
             .main-heading {
@@ -136,7 +136,7 @@
                         justify-content: space-between;
 
                         @include media-breakpoint-up(xl) {
-                            padding: 120px 64px 65px 315px;
+                            padding: 120px 64px 65px 295px;
                             min-height: 556px;
                         }
     

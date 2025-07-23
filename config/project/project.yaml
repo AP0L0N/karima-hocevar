@@ -1,4 +1,4 @@
-dateModified: 1748263455
+dateModified: 1753301002
 email:
   fromEmail: poje.tilen@gmail.com
   fromName: 'Karima Hočevar'
@@ -94,7 +94,7 @@ system:
   edition: solo
   live: true
   name: 'Karima Hočevar'
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

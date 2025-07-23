@@ -1,16 +1,28 @@
-<div class="full-text-box">
+<div class="full-text-box {{ field.themedBackground ? 'themed-background' : '' }}">
     <div class="container position-relative">
-        <div class="background-image-wrapper left">
-            <img src="/assets/img/transparent-leaf-left.png" alt="" role="presentation">
-        </div>
+
+        {% if field.themedBackground %}
+            <div class="background-image-wrapper left">
+                <img src="/assets/img/transparent-leaf-left.png" alt="" role="presentation">
+            </div>
+        {% endif %}
+
         <div class="full-text-box__wrapper">
-            <h2>{{ field.heading }}</h2>
+
+            {% if field.heading is not empty %}
+                <h2>{{ field.heading }}</h2>
+            {% endif %}
+
             <div class="full-text-box__text">
                 {{ field.description | raw }}
             </div>
         </div>
-        <div class="background-image-wrapper right">
-            <img src="/assets/img/transparent-leaf-right.png" alt="" role="presentation">
-        </div>
+
+        {% if field.themedBackground %}
+            <div class="background-image-wrapper right">
+                <img src="/assets/img/transparent-leaf-right.png" alt="" role="presentation">
+            </div>
+        {% endif %}
+
     </div>
 </div>
