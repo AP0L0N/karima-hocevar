@@ -78,12 +78,12 @@
             </div>
         </div>
     </div>
+    
+    {% include '_matrix/_listOfInspirations' with {
+        field: {
+            inspirations: craft.entries.section('inspirations').id('not ' ~ entry.id).orderBy('postDate DESC').limit(3),
+            heading: "More inspirations" | t
+        }
+    } %}
 </div>
 
-
-{% include '_matrix/_listOfInspirations' with {
-    field: {
-        inspirations: craft.entries.section('inspirations').id('not ' ~ entry.id).orderBy('postDate DESC').limit(3),
-        heading: "More inspirations" | t
-    }
-} %}

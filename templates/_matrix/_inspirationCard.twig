@@ -9,7 +9,7 @@
             <div class="inspiration-card__link__content__inner-wrapper">
                 <div class="inspiration-card__link__content__date">{{ item.postDate | date('d. M Y') }}</div>
                 <h3 class="inspiration-card__link__content__title">{{ item.title }}</h3>
-                <div class="inspiration-card__link__content__description">{{ item.description | raw }}</div>
+                <div class="inspiration-card__link__content__description">{{ itemContent.subTitle | raw }}</div>
             </div>
             <span class="normal-link">
                 <span>{{ "Read more" | t }}</span>

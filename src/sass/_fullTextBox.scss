@@ -19,7 +19,7 @@
             padding: 60px 6px 50px;
 
             @include media-breakpoint-up(lg) {
-                padding: 120px 65px 100px;
+                padding: 100px 65px;
             }
 
             h2 {
@@ -42,6 +42,11 @@
             top: 0;
             bottom: 0;
             z-index: 2;
+            display: none;
+
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
     
             img {
                 display: block;
@@ -49,12 +54,10 @@
     
             &.left {
                 left: 0;
-                transform: translateX(-50%);
             }
     
             &.right {
                 right: 0;
-                transform: translateX(50%);
             }
         }
     }

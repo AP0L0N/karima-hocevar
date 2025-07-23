@@ -83,6 +83,7 @@ header {
 
                 .navbar-nav {
                     gap: 10px;
+                    padding-top: 21px;
 
                     .nav-item {
 
@@ -91,7 +92,7 @@ header {
                             font-weight: 400;
                             font-size: $font-size-sm;
                             line-height: 1.55;
-                            padding: 12px 10px;
+                            padding: 12px 10px 12px 0;
 
                             @media(min-width: 991px) and (max-width: 1200px) {
                                 font-size: 12px;

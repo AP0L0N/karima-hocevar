@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5 {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 32px;
 
     @include media-breakpoint-up(lg) {
         font-size: 42px;
@@ -50,18 +50,18 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 32px;
 
     @include media-breakpoint-up(lg) {
-        font-size: 54px;
+        font-size: 42px;
     }
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 20px;
 
     @include media-breakpoint-up(lg) {
-        font-size: 36px;
+        font-size: 32px;
     }
 }
 
