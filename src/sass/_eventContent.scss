@@ -242,7 +242,7 @@
     }
 
     .registration-form {
-        background-color: $pink-c5;
+        background-color: #FDF5F3;
         padding: 60px 0 40px;
 
         @include media-breakpoint-up(lg) {
@@ -262,7 +262,7 @@
             &__content {
 
                 h2 {
-                    color: #FFF;
+                    color: #E2785F !important;
                     font-family: $font-family-raleway;
                     font-size: 38px;
                     font-weight: 500;
@@ -276,7 +276,7 @@
                 }
 
                 p {
-                    color: #FFF;
+                    color: #75716E;
                     font-family: $font-sofia-extralight;
                     font-size: 18px;
                     font-weight: 300;
@@ -295,7 +295,7 @@
                         margin-bottom: 21px;
 
                         label {
-                            color: #FFF;
+                            color: #75716E;
                             font-family: $font-sofia-light;
                             font-size: 14px;
                             font-weight: 400;
@@ -322,6 +322,8 @@
 
                     button {
                         margin-top: 11px;
+                        background-color: #E58B76;
+                        color: white;
                     }
                 }
             }

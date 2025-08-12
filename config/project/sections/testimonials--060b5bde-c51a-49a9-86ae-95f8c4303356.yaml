@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 12df143c-7872-4374-81b2-a74906b45ea3 # Testimonial entry
+handle: testimonials
+maxAuthors: 1
+name: Testimonials
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  0645712b-5f0e-4ede-b288-136194b2d349: # Karima Hočevar
+    enabledByDefault: true
+    hasUrls: true
+    template: testimonials/_entry.twig
+    uriFormat: 'testimonials/{slug}'
+type: channel

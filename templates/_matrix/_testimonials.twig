@@ -1,0 +1,40 @@
+{% set testimonials = field.testimonialEntries.all() is empty ? craft.entries.section('testimonials').all() : field.testimonialEntries.all() %}
+
+<section class="client-testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-heading">{{ "Client testimonials" | t }}</h2>
+            </div>
+        </div>
+        
+        <div class="testimonials-slider-wrapper">
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    {% for testimonial in testimonials %}
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="quote-icon">  
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="43" viewBox="0 0 56 43" fill="none"><path d="M4.97157 39.2933C1.73675 35.8538 0 31.9961 0 25.7428C0 14.7389 7.71645 4.87629 18.9378 0L21.7424 4.33238C11.2685 10.0041 9.22079 17.3641 8.40424 22.0046C10.0907 21.1306 12.2986 20.8256 14.4625 21.0268C20.1281 21.5519 24.594 26.2081 24.594 31.9961C24.594 38.0734 19.6727 43 13.6019 43C10.2321 43 7.00982 41.4595 4.97157 39.2933ZM36.3775 39.2933C33.1427 35.8538 31.406 31.9961 31.406 25.7428C31.406 14.7389 39.1224 4.87629 50.3438 0L53.1483 4.33238C42.6744 10.0041 40.6268 17.3641 39.8102 22.0046C41.4967 21.1306 43.7046 20.8256 45.8684 21.0268C51.5341 21.5519 56 26.2081 56 31.9961C56 38.0734 51.0787 43 45.0079 43C41.638 43 38.4158 41.4595 36.3775 39.2933Z" fill="#E58B76"/></svg>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    {{ testimonial.testimonial }}
+                                </blockquote>
+                                <footer class="testimonial-author">
+                                    — {{ testimonial.authorName }}, {{ testimonial.authorAge }}
+                                </footer>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="swiper-button-prev testimonials-nav-btn"></div>
+            <div class="swiper-button-next testimonials-nav-btn"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination testimonials-pagination"></div>
+        </div>
+    </div>
+</section>

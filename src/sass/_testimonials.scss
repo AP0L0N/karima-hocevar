@@ -1,0 +1,190 @@
+@import 'variables';
+
+.client-testimonials {
+    margin: 60px 0;
+    
+    @include media-breakpoint-up(lg) {
+        margin: 80px 0;
+    }
+    
+    .section-heading {
+        margin-bottom: 0;
+        text-align: left;
+        
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 25px;
+        }
+    }
+    
+    .testimonials-slider-wrapper {
+        position: relative;
+        margin-top: 20px;
+    }
+    
+    .testimonials-swiper {
+        padding: 20px 0 60px;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 30px 0 70px;
+        }
+    }
+    
+    .testimonial-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 40px;
+        }
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+    }
+    
+    .quote-icon {
+        font-size: 48px;
+        color: $primary;
+        font-family: Georgia, serif;
+        line-height: 1;
+        margin-bottom: 20px;
+        display: block;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 56px;
+            margin-bottom: 25px;
+        }
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $default;
+        margin: 0 0 20px 0;
+        font-style: italic;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+    }
+    
+    .testimonial-author {
+        font-size: 14px;
+        color: $default;
+        font-weight: 500;
+        margin: 0;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+        }
+    }
+    
+    // Navigation buttons
+    .testimonials-nav-btn {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border: 2px solid $primary;
+        border-radius: 50%;
+        color: $primary;
+        transition: all 0.3s ease;
+        display: none !important;
+        
+        @include media-breakpoint-up(lg) {
+            width: 50px;
+            height: 50px;
+        }
+        
+        &:after {
+            font-size: 16px;
+            font-weight: bold;
+            
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+        }
+        
+        &:hover {
+            background: $primary;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        &.swiper-button-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            
+            &:hover {
+                transform: none;
+                background: white;
+                color: $primary;
+            }
+        }
+    }
+    
+    .swiper-button-prev {
+        left: 10px;
+        
+        @include media-breakpoint-up(lg) {
+            left: 20px;
+        }
+    }
+    
+    .swiper-button-next {
+        right: 10px;
+        
+        @include media-breakpoint-up(lg) {
+            right: 20px;
+        }
+    }
+    
+    // Pagination
+    .testimonials-pagination {
+        bottom: 0;
+        
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border: 2px solid $primary;
+            opacity: 1;
+            margin: 0 6px;
+            transition: all 0.3s ease;
+            
+            @include media-breakpoint-up(lg) {
+                width: 14px;
+                height: 14px;
+                margin: 0 8px;
+            }
+            
+            &.swiper-pagination-bullet-active {
+                background: $primary;
+                transform: scale(1.2);
+            }
+            
+            &:hover {
+                background: $primary;
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+    // Responsive adjustments
+    @include media-breakpoint-down(md) {
+        .testimonials-nav-btn {
+            display: none;
+        }
+        
+        .testimonials-swiper {
+            padding-bottom: 50px;
+        }
+    }
+}

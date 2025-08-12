@@ -1,0 +1,74 @@
+color: cyan
+description: null
+fieldLayouts:
+  bc45be10-90f2-4d82-9974-15e10279669e:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-08-12T07:54:01+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 0a153b6f-cd43-45f9-9706-827e245843b6 # Multi-line text
+            handle: testimonial
+            includeInCards: false
+            instructions: null
+            label: Testimonial
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcc520a0-1581-41e7-8b72-aefaea483f3e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-12T07:53:02+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dd5d4e62-a4a2-4de9-b269-49a029773e71 # Simple text
+            handle: authorName
+            includeInCards: false
+            instructions: null
+            label: 'Author name'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f157ae36-8d3d-4330-88b4-44261d21d4f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-12T07:53:02+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dd5d4e62-a4a2-4de9-b269-49a029773e71 # Simple text
+            handle: authorAge
+            includeInCards: false
+            instructions: null
+            label: 'Author age'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32a9df7c-d788-473e-9188-41d3599ec3c8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a646ba04-e621-43e6-9f93-90a1e953bf85
+        userCondition: null
+handle: testimonialEntry
+hasTitleField: false
+icon: comment
+name: 'Testimonial entry'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: "{ authorName ~ ' - ' ~ id }"
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

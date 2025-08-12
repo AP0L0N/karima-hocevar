@@ -114,7 +114,7 @@
                             margin-left: 20px;
 
                             @include media-breakpoint-up(xl) {
-                                width: 470px;
+                                width: 420px;
                                 margin-left: 0;
                             }
         
@@ -138,6 +138,7 @@
                         @include media-breakpoint-up(xl) {
                             padding: 120px 64px 65px 295px;
                             min-height: 556px;
+                            align-content: center;
                         }
     
                         .box-content__contents-wrapper {
@@ -171,7 +172,7 @@
                             margin-top: 15px;
 
                             @include media-breakpoint-up(xl) {
-                                margin-top: 85px;
+                                margin-top: 42px;
                             }
     
                             .btn {
