@@ -1,4 +1,4 @@
-{% cache for 1 day %}
+{% cache for 1 day if craft.app.config.env == 'production' %}
 <!DOCTYPE html>
 <html lang="{{ currentSite.language }}">
 <head>

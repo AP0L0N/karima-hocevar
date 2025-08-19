@@ -21,7 +21,22 @@
                                     {{ testimonial.testimonial }}
                                 </blockquote>
                                 <footer class="testimonial-author">
-                                    — {{ testimonial.authorName }}, {{ testimonial.authorAge }}
+                                    {% if testimonial.authorDescription is not empty %}
+                                        {# Enhanced author display with image and custom description #}
+                                        <div class="author-enhanced">
+                                            {% if testimonial.image %}
+                                                <div class="author-image">
+                                                    <img src="{{ testimonial.image.one().getUrl('testimonialsImage') }}" alt="{{ testimonial.authorName }}" />
+                                                </div>
+                                            {% endif %}
+                                            <div class="author-details">
+                                                {{ testimonial.authorDescription | raw }}
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        {# Simple author display #}
+                                        — {{ testimonial.authorName }}, {{ testimonial.authorAge }}
+                                    {% endif %}
                                 </footer>
                             </div>
                         </div>

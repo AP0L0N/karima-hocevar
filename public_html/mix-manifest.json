@@ -1,6 +1,5 @@
 {
-    "/assets/js/app.js": "/assets/js/app.js?id=034fa4588e7794f177dfdb0fe20b3062",
-    "/assets/js/cookie-banner.js": "/assets/js/cookie-banner.js?id=15d0a2724c7d47d5d0cc3bd848a1ca22",
-    "/assets/css/plugins.css": "/assets/css/plugins.css?id=6530af603cf8cf15e4f8aed88bc8c232",
-    "/assets/css/main.css": "/assets/css/main.css?id=b90c8d9b71e04ae70976e0b8033ca1bb"
+    "/assets/js/app.js": "/assets/js/app.js",
+    "/assets/js/cookie-banner.js": "/assets/js/cookie-banner.js",
+    "/assets/css/main.css": "/assets/css/main.css"
 }

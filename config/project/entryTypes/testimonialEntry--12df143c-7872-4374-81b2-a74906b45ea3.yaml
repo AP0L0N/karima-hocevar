@@ -11,7 +11,7 @@ fieldLayouts:
             dateAdded: '2025-08-12T07:54:01+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 0a153b6f-cd43-45f9-9706-827e245843b6 # Multi-line text
+            fieldUid: 0a153b6f-cd43-45f9-9706-827e245843b6
             handle: testimonial
             includeInCards: false
             instructions: null
@@ -21,6 +21,40 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: dcc520a0-1581-41e7-8b72-aefaea483f3e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-19T11:35:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 825511a6-afc4-457c-a1bd-c476ab5d2e56 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f7f81d4-52c1-465a-860f-7038e5a31b56
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-19T11:45:01+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
+            handle: authorDescription
+            includeInCards: false
+            instructions: null
+            label: 'Author description'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea38a38b-a230-486c-af76-19519f57b55c
             userCondition: null
             warning: null
             width: 100

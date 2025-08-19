@@ -1,4 +1,4 @@
-dateModified: 1753306418
+dateModified: 1755604359
 email:
   fromEmail: info@karimahocevar.com
   fromName: 'Karima Hočevar'
@@ -17,6 +17,7 @@ fs:
     url: $PRIMARY_SITE_URL/assets/uploads
 meta:
   __names__:
+    0c7bf49c-afe1-4ddb-852d-dd796ba0be96: 'Main navigation' # Main navigation
     1cc501c6-7465-41d2-a392-9870a0a59e48: Events # Events
     1fb86694-1ef7-4a8a-8874-cad4b0e765fe: 'Hero banner - mobile' # Hero banner - mobile
     2d541ab1-b48d-4113-92a8-96a1bf6325be: 'List of inspirations' # List of inspirations
@@ -31,6 +32,7 @@ meta:
     9b561524-debf-4118-bfa9-327310774658: 'Social links' # Social links
     9bca6d4c-e414-4fbe-bc05-53d304d14380: Quote # Quote
     12d93a50-135a-4e0d-9cef-dadc1209904d: 'Editor text' # Editor text
+    12df143c-7872-4374-81b2-a74906b45ea3: 'Testimonial entry' # Testimonial entry
     22e0a339-a048-4547-94a6-c3d53a4a6523: Events # Events
     33ab6968-ee12-4c8f-b599-997ea876527e: 'Newsletter signup form' # Newsletter signup form
     41c6d7d1-9c2a-4c1e-abfa-06ae34d3d08a: Email # Email
@@ -40,6 +42,7 @@ meta:
     57c3e1d3-da51-4a25-b8f9-d57bfbe8dcc8: 'Karima Hočevar' # Karima Hočevar
     58e5b824-8237-4fc4-87f3-570c3969b621: Simple # Simple
     62d1b830-f495-4a67-a4b3-e4fb92cc74a8: Inspirations # Inspirations
+    68d84080-47d2-4135-a884-38c12bb3a4d7: 'Testimonials image' # Testimonials image
     73a7162d-b07e-405d-be78-96423e43ca89: Images # Images
     76b2d286-67bc-4afc-8e4c-26e40162c6b3: 'Inspiration content' # Inspiration content
     84aee63b-202b-4dea-8359-9ae287d08930: Date # Date
@@ -49,6 +52,7 @@ meta:
     485d659b-8c7c-48bc-ad83-f6f8b8b19b95: 'Editor contents' # Editor contents
     507d02cd-6d18-491c-a393-b0ed79f2f535: 'Highlighted text' # Highlighted text
     561f5795-edf2-4057-bf0c-1eede2181d9d: Images # Images
+    698c96c6-f4ac-43cb-a0ac-e5b7276a0ac6: 'Static pages' # Static pages
     1436d17a-03bf-4c1e-9d30-47367529b37a: 'List of events' # List of events
     6674e180-5fc8-4991-ba5e-add100694daa: 'Newsletter subscriber' # Newsletter subscriber
     75968ea4-3e1b-46d8-86ef-1757f6d6cee8: Lightswitch # Lightswitch
@@ -82,6 +86,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: TO0UAJTG3MH8EBKA1SPGUS1M
+    schemaVersion: 2.1.0
   seo:
     edition: standard
     enabled: true

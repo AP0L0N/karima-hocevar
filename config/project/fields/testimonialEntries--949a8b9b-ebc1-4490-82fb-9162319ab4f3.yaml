@@ -17,7 +17,7 @@ settings:
   showUnpermittedEntries: false
   showUnpermittedSections: false
   sources:
-    - 'section:060b5bde-c51a-49a9-86ae-95f8c4303356' # Testimonials
+    - 'section:060b5bde-c51a-49a9-86ae-95f8c4303356'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
