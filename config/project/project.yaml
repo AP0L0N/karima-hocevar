@@ -1,4 +1,4 @@
-dateModified: 1756098598
+dateModified: 1756101304
 email:
   fromEmail: info@karimahocevar.com
   fromName: 'Karima Hočevar'
@@ -26,16 +26,20 @@ meta:
     05bbd45d-9ddc-4134-8cba-c41b83c3c23a: 'Page sections' # Page sections
     05d9af86-c1bf-46ee-a5fa-37450aa42e78: EPR # EPR
     5fd391e7-5e9b-4552-9423-16102d2210cc: Heading # Heading
+    6a6795a4-5ef2-4a80-8b4e-13ce14bfe420: Banners # Banners
     6c899c98-0e37-4bb5-97df-5b1d53b40281: Actions # Actions
     8cd1b229-e07c-46b6-8480-780c5542757d: 'Building blocks' # Building blocks
     9b561524-debf-4118-bfa9-327310774658: 'Social links' # Social links
     9bca6d4c-e414-4fbe-bc05-53d304d14380: Quote # Quote
     12d93a50-135a-4e0d-9cef-dadc1209904d: 'Editor text' # Editor text
+    12df143c-7872-4374-81b2-a74906b45ea3: 'Testimonial entry' # Testimonial entry
     22e0a339-a048-4547-94a6-c3d53a4a6523: Events # Events
+    024c6bac-7751-40e7-b9d5-103891644965: 'Testimonials image' # Testimonials image
     33ab6968-ee12-4c8f-b599-997ea876527e: 'Newsletter signup form' # Newsletter signup form
     41c6d7d1-9c2a-4c1e-abfa-06ae34d3d08a: Email # Email
     41ea246c-1f5f-4cd8-86a8-790cb170ac60: Images # Images
     47ee7517-59aa-4532-a3c5-028ed325670d: Description # Description
+    49b32fcc-d019-4135-b8b7-573f2af4240a: 'Hero banner (slider)' # Hero banner (slider)
     53b78b55-85a7-4079-9f0f-c7a0382407c2: 'Event content' # Event content
     57c3e1d3-da51-4a25-b8f9-d57bfbe8dcc8: 'Karima Hočevar' # Karima Hočevar
     58e5b824-8237-4fc4-87f3-570c3969b621: Simple # Simple
@@ -66,14 +70,13 @@ meta:
     cc7fcca0-3053-4bca-85b8-873f7c668353: Newsletter # Newsletter
     ce2a73cc-de2a-4098-9441-0917ccd65347: 'Hero banner' # Hero banner
     d0a1cff7-d09f-4010-a16e-1f73ee2993bb: 'Resonant Touch' # Resonant Touch
-    d700efea-a297-4298-9fb0-bc50505f82e8: Banners # Banners
     dd5d4e62-a4a2-4de9-b269-49a029773e71: 'Simple text' # Simple text
+    ed96d144-fd71-46f8-81ea-6a780267ca71: 'Main navigation' # Main navigation
     efcdaba7-ebcc-4c3b-93af-6444a803da64: 'Event registrations' # Event registrations
     f4b8921b-b141-469c-a6c0-bbe3c26cc73f: 'Image with text box' # Image with text box
     f8b207c1-f9ae-4559-9ed1-c16736ec2a67: 'All inspirations' # All inspirations
     f577f701-0c33-41a7-be8e-657503de63b8: 'Inspiration cover' # Inspiration cover
     f105584b-2750-4689-af12-84d981c927c5: 'Inspiration thumbnail' # Inspiration thumbnail
-    fab0df21-15f2-4a46-b261-10d32eef3fc9: 'Hero banner (slider)' # Hero banner (slider)
     fbf1838b-6239-49f2-bcf4-c98412813028: 'About me' # About me
 plugins:
   ckeditor:
@@ -84,6 +87,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: BBUBTYTZ7SW41MESFPQU5P8V
+    schemaVersion: 2.1.0
   seo:
     edition: standard
     enabled: true

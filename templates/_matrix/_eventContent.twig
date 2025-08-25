@@ -18,6 +18,10 @@
                 <p class="super-title">{{ "Event" | t }}</p>
 
                 <h1>{{ entry.title }}</h1>
+                
+                {% if field.shortDescription is not empty %}
+                    <p class="short-description mt-3">{{ field.shortDescription }}</p>
+                {% endif %}
     
                 {% if eventContent.registrationsOpenUntil|date('U') > now|date('U') %}
                     <div class="actions">

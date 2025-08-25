@@ -93,5 +93,37 @@ document.addEventListener('DOMContentLoaded', function() {
         speed: 800,
     });
 
+
+    // Handle all external links
+    // Add target="_blank" and rel="noopener nofollow" to all external links
+    const allLinks = document.querySelectorAll('a[href]');
+    allLinks.forEach(link => {
+        try {
+            const href = link.getAttribute('href');
+
+            // Ignore empty, anchor, javascript, mailto, tel, and relative links
+            if (
+                !href ||
+                href.startsWith('#') ||
+                href.startsWith('javascript:') ||
+                href.startsWith('mailto:') ||
+                href.startsWith('tel:') ||
+                href.startsWith('/') ||
+                href.startsWith(window.location.origin)
+            ) {
+                return;
+            }
+
+            // If the link is external (different origin)
+            const linkUrl = new URL(href, window.location.origin);
+            if (linkUrl.origin !== window.location.origin) {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener nofollow');
+            }
+
+        } catch (e) {
+            // Ignore invalid URLs
+        }
+    });
 });
 

@@ -62,7 +62,15 @@
         }
     }
 
-    &:not(.themed-background) {
+    &.no-styling {
+
+        .full-text-box__wrapper {
+            padding: 0 !important;
+            border: none !important;
+        }
+    }
+
+    &:not(.themed-background):not(.no-styling) {
      
         .full-text-box__wrapper {
             padding: 24px 28px 28px 24px;

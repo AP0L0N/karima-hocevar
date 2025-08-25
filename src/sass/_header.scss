@@ -105,7 +105,22 @@ header {
                             &:after {
                                 border: none;
                             }
+
+                            &.dropdown-toggle {
+
+                                svg {
+                                    margin-left: 1px !important;
+                                }
+                            }
                         }
+                    }
+                }
+
+                .dropdown-item {
+
+                    &.active {
+                        background-color: transparent !important;
+                        color: black !important;
                     }
                 }
             }

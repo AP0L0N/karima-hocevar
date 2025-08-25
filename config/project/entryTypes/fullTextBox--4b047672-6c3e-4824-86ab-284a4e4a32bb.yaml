@@ -58,6 +58,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-08-25T05:55:04+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 75968ea4-3e1b-46d8-86ef-1757f6d6cee8 # Lightswitch
+            handle: noStyling
+            includeInCards: false
+            instructions: null
+            label: 'No styling'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4145b558-2527-422f-a24b-b822aeb47e16
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: d51d78a2-27e3-447a-bce7-b0de5ec24cde
         userCondition: null

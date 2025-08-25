@@ -1,0 +1,37 @@
+<div class="hero-banner-slider">
+    <div class="swiper hero-banner-swiper">
+        <div class="swiper-wrapper">
+            {% for banner in field.banners.all() %}
+                <div class="swiper-slide">
+                    <div class="hero-banner">
+                        <div class="container">
+                            <div class="hero-banner__content">
+                                <h1>{{ banner.heading }}</h1>
+                                <div class="description">{{ banner.description | raw }}</div>
+
+                                {% include '_matrix/_actions' with {
+                                    actions: banner.actions
+                                } %}
+                            </div>
+
+                            {% if banner.images.one() %}
+                                <div class="hero-banner__image">
+                                    <div class="hero-banner__image-mask"><svg xmlns="http://www.w3.org/2000/svg" width="625" height="639" viewBox="0 0 625 639" fill="none"><path d="M625 0C293.629 7.73159e-06 25 268.629 25 600V639H0V0H625Z" fill="#D9D9D9"/></svg></div>
+
+                                    {% include '_matrix/_images' with {
+                                        images: banner.images.one(),
+                                        transform: 'heroBannerDesktop',
+                                        mobileTransform: 'heroBannerMobile'
+                                    } %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Pagination -->
+        <div class="swiper-pagination hero-banner-pagination"></div>
+    </div>
+</div>
