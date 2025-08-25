@@ -6,52 +6,88 @@ searchable: false
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
           - ce2a73cc-de2a-4098-9441-0917ccd65347 # Hero banner
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - fab0df21-15f2-4a46-b261-10d32eef3fc9 # Hero banner (slider)
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 90ac9b7f-48f2-40ad-a8e5-792e63613177 # Image with text box
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 4b047672-6c3e-4824-86ab-284a4e4a32bb # Full text box
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 76b2d286-67bc-4afc-8e4c-26e40162c6b3 # Inspiration content
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 2d541ab1-b48d-4113-92a8-96a1bf6325be # List of inspirations
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 53b78b55-85a7-4079-9f0f-c7a0382407c2 # Event content
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 1436d17a-03bf-4c1e-9d30-47367529b37a # List of events
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 33ab6968-ee12-4c8f-b599-997ea876527e # Newsletter signup form
+        -
+          - group
+          - General
     -
       __assoc__:
         -
           - uid
           - 9b561524-debf-4118-bfa9-327310774658 # Social links
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

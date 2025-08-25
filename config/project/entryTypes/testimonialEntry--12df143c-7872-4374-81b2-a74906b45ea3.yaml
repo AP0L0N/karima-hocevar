@@ -11,7 +11,7 @@ fieldLayouts:
             dateAdded: '2025-08-12T07:54:01+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 0a153b6f-cd43-45f9-9706-827e245843b6 # Multi-line text
+            fieldUid: 0a153b6f-cd43-45f9-9706-827e245843b6
             handle: testimonial
             includeInCards: false
             instructions: null

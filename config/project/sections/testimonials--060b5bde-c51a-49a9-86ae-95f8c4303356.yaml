@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 12df143c-7872-4374-81b2-a74906b45ea3 # Testimonial entry
+    uid: 12df143c-7872-4374-81b2-a74906b45ea3
 handle: testimonials
 maxAuthors: 1
 name: Testimonials

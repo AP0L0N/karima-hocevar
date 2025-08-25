@@ -1,4 +1,4 @@
-dateModified: 1753306418
+dateModified: 1756098598
 email:
   fromEmail: info@karimahocevar.com
   fromName: 'Karima Hočevar'
@@ -66,12 +66,14 @@ meta:
     cc7fcca0-3053-4bca-85b8-873f7c668353: Newsletter # Newsletter
     ce2a73cc-de2a-4098-9441-0917ccd65347: 'Hero banner' # Hero banner
     d0a1cff7-d09f-4010-a16e-1f73ee2993bb: 'Resonant Touch' # Resonant Touch
+    d700efea-a297-4298-9fb0-bc50505f82e8: Banners # Banners
     dd5d4e62-a4a2-4de9-b269-49a029773e71: 'Simple text' # Simple text
     efcdaba7-ebcc-4c3b-93af-6444a803da64: 'Event registrations' # Event registrations
     f4b8921b-b141-469c-a6c0-bbe3c26cc73f: 'Image with text box' # Image with text box
     f8b207c1-f9ae-4559-9ed1-c16736ec2a67: 'All inspirations' # All inspirations
     f577f701-0c33-41a7-be8e-657503de63b8: 'Inspiration cover' # Inspiration cover
     f105584b-2750-4689-af12-84d981c927c5: 'Inspiration thumbnail' # Inspiration thumbnail
+    fab0df21-15f2-4a46-b261-10d32eef3fc9: 'Hero banner (slider)' # Hero banner (slider)
     fbf1838b-6239-49f2-bcf4-c98412813028: 'About me' # About me
 plugins:
   ckeditor:
