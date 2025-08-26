@@ -43,6 +43,13 @@ header {
                         width: 100%;
                         height: auto;
                     }
+
+                    &:hover {
+
+                        &:after {
+                            display: none !important;
+                        }
+                    }
                 }
 
                 .navbar-toggler {
