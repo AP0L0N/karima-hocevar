@@ -14,24 +14,59 @@ import 'swiper/css/effect-fade';
 document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize Testimonials Slider
+    const testimonialsSliderWrapper = document.querySelector('.testimonials-slider-wrapper');
+    const maxTestimonialsPerView = testimonialsSliderWrapper ? 
+        parseInt(testimonialsSliderWrapper.getAttribute('data-number-of-testimonials-per-view')) || 4 : 4;
+    
+    // Create responsive breakpoints that gradually decrease from max to 1
+    const createBreakpoints = (max) => {
+        const breakpoints = {};
+        
+        // Mobile: 1 testimonial (default)
+        // Small tablets (576px+): 2 testimonials (if max >= 2)
+        if (max >= 2) {
+            breakpoints[576] = {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            };
+        }
+        
+        // Medium tablets (768px+): 3 testimonials (if max >= 3)
+        if (max >= 3) {
+            breakpoints[768] = {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            };
+        }
+        
+        // Large tablets/small desktops (992px+): 4 testimonials (if max >= 4)
+        if (max >= 4) {
+            breakpoints[992] = {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            };
+        }
+        
+        // Large desktops (1200px+): max testimonials
+        if (max >= 5) {
+            breakpoints[1200] = {
+                slidesPerView: max,
+                spaceBetween: 40,
+            };
+        }
+        
+        return breakpoints;
+    };
+    
     const testimonialsSlider = new Swiper('.testimonials-swiper', {
         modules: [Navigation, Pagination],
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 20,
         loop: false,
         autoplay: false,
         
-        // Responsive breakpoints
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            }
-        },
+        // Responsive breakpoints based on numberOfTestimonialsPerView
+        breakpoints: createBreakpoints(maxTestimonialsPerView),
         
         // Navigation
         navigation: {

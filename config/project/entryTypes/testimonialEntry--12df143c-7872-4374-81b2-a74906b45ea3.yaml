@@ -25,6 +25,40 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-08-19T11:35:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 825511a6-afc4-457c-a1bd-c476ab5d2e56 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f7f81d4-52c1-465a-860f-7038e5a31b56
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-08-19T11:45:01+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
+            handle: authorDescription
+            includeInCards: false
+            instructions: null
+            label: 'Author description'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea38a38b-a230-486c-af76-19519f57b55c
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-08-12T07:53:02+00:00'
             editCondition: null
             elementCondition: null
@@ -55,40 +89,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 32a9df7c-d788-473e-9188-41d3599ec3c8
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-08-25T05:44:33+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 825511a6-afc4-457c-a1bd-c476ab5d2e56 # Image
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f91a19a9-8dd5-4163-9320-320e1d34307f
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-08-25T05:35:26+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
-            handle: authorDescription
-            includeInCards: false
-            instructions: null
-            label: 'Author description'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 12707c60-7735-499f-b50a-6593c78322f1
             userCondition: null
             warning: null
             width: 100

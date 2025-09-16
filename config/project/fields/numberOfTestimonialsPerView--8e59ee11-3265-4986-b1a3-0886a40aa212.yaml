@@ -1,0 +1,19 @@
+columnSuffix: null
+handle: numberOfTestimonialsPerView
+instructions: null
+name: 'Number of testimonials per view'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: 4
+  max: 5
+  min: 1
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  step: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

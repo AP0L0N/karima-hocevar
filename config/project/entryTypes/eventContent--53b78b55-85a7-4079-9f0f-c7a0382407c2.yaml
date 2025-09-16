@@ -1,12 +1,15 @@
 color: yellow
+description: null
 fieldLayouts:
   1a8a47db-426d-4bda-803a-f1c753fc16ba:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 73a7162d-b07e-405d-be78-96423e43ca89 # Images
             handle: null
@@ -23,6 +26,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-14T00:12:01+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
             handle: shortDescription
@@ -39,6 +43,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
             handle: null
@@ -55,6 +60,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 47ee7517-59aa-4532-a3c5-028ed325670d # Description
             handle: requirements
@@ -71,6 +77,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 84aee63b-202b-4dea-8359-9ae287d08930 # Date
             handle: dateFrom
@@ -87,6 +94,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 84aee63b-202b-4dea-8359-9ae287d08930 # Date
             handle: dateTo
@@ -103,6 +111,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-14T01:19:19+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
             handle: dateExtraNotes
@@ -119,6 +128,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 84aee63b-202b-4dea-8359-9ae287d08930 # Date
             handle: registrationsOpenUntil
@@ -135,6 +145,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
             handle: price
@@ -151,6 +162,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-14T01:22:09+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 75968ea4-3e1b-46d8-86ef-1757f6d6cee8 # Lightswitch
             handle: eventIsFree
@@ -167,6 +179,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-13T23:56:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
             handle: trainingPlace
@@ -183,6 +196,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-14T00:12:01+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5fd391e7-5e9b-4552-9423-16102d2210cc # Heading
             handle: eventAuthor
@@ -194,6 +208,23 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 0e41c5b3-e535-4aa7-a808-ad4cf9b22978
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-16T13:44:34+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: dd5d4e62-a4a2-4de9-b269-49a029773e71 # Simple text
+            handle: trainingPlaceLabel
+            includeInCards: false
+            instructions: null
+            label: 'Training place label'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 08183cb9-bcdb-4199-9604-b3676ac67ca1
             userCondition: null
             warning: null
             width: 100

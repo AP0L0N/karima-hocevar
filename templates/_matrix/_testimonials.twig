@@ -4,20 +4,20 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="section-heading">{{ "Client testimonials" | t }}</h2>
+                <h2 class="section-heading">{{ field.title is not empty ? field.title : ("Client testimonials" | t) }}</h2>
             </div>
         </div>
         
-        <div class="testimonials-slider-wrapper">
+        <div class="testimonials-slider-wrapper" data-number-of-testimonials-per-view="{{ field.numberOfTestimonialsPerView ?? 4 }}">
             <div class="swiper testimonials-swiper">
                 <div class="swiper-wrapper">
                     {% for testimonial in testimonials %}
                         <div class="swiper-slide">
                             <div class="testimonial-card">
-                                {% if testimonial.authorDescription is not empty %}
+                                {% if testimonial.image.one() %}
                                     {# Enhanced design with profile section at top #}
                                     <div class="testimonial-profile">
-                                        {% if testimonial.image %}
+                                        {% if testimonial.image.one() %}
                                             <div class="profile-image">
                                                 <img src="{{ testimonial.image.one().getUrl('testimonialsImage') }}" alt="{{ testimonial.authorName }}" />
                                             </div>
@@ -26,7 +26,9 @@
                                         {% endif %}
                                         <div class="profile-details">
                                             <p class="author-name">{{ testimonial.authorName }}</p>
-                                            <div class="author-description">{{ testimonial.authorDescription | raw }}</div>
+                                            {% if testimonial.authorDescription is not empty %}
+                                                <div class="author-description">{{ testimonial.authorDescription | raw }}</div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     

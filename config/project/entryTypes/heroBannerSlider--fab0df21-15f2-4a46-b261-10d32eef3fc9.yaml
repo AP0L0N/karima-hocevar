@@ -1,17 +1,17 @@
 color: yellow
 description: null
 fieldLayouts:
-  555fc127-e100-447f-a784-3879c525f09d:
+  df52a3cb-f1aa-45dc-bf6e-95810fee6ce7:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-08-25T05:33:26+00:00'
+            dateAdded: '2025-08-25T05:09:47+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 6a6795a4-5ef2-4a80-8b4e-13ce14bfe420 # Banners
+            fieldUid: d700efea-a297-4298-9fb0-bc50505f82e8
             handle: null
             includeInCards: false
             instructions: null
@@ -20,12 +20,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8063b3a8-a864-4819-91ee-4a5ace753dcf
+            uid: 1ab464f5-6ba2-4fa5-a29c-1d7373309aa5
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: d83e1155-e979-4c0d-b094-99cafeae421f
+        uid: a61e6b51-e0e8-4ed3-96f8-5626d28b878a
         userCondition: null
 handle: heroBannerSlider
 hasTitleField: false

@@ -20,7 +20,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 49b32fcc-d019-4135-b8b7-573f2af4240a # Hero banner (slider)
+          - fab0df21-15f2-4a46-b261-10d32eef3fc9 # Hero banner (slider)
         -
           - group
           - General
@@ -92,7 +92,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 4cb38e07-9119-438b-8364-7091cf16a74b
+          - 4cb38e07-9119-438b-8364-7091cf16a74b # Testimonials
         -
           - group
           - General
