@@ -1,0 +1,40 @@
+color: yellow
+description: null
+fieldLayouts:
+  555fc127-e100-447f-a784-3879c525f09d:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-08-25T05:33:26+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6a6795a4-5ef2-4a80-8b4e-13ce14bfe420 # Banners
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8063b3a8-a864-4819-91ee-4a5ace753dcf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d83e1155-e979-4c0d-b094-99cafeae421f
+        userCondition: null
+handle: heroBannerSlider
+hasTitleField: false
+icon: images-user
+name: 'Hero banner (slider)'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

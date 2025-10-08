@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 05bbd45d-9ddc-4134-8cba-c41b83c3c23a # Page sections
+handle: staticPages
+maxAuthors: 1
+name: 'Static pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  0645712b-5f0e-4ede-b288-136194b2d349: # Karima Hočevar
+    enabledByDefault: true
+    hasUrls: true
+    template: index
+    uriFormat: '{slug}'
+type: channel

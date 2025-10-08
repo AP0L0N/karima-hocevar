@@ -59,11 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     const testimonialsSlider = new Swiper('.testimonials-swiper', {
-        modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination, Autoplay],
         slidesPerView: 1,
         spaceBetween: 20,
         loop: false,
-        autoplay: false,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
         
         // Responsive breakpoints based on numberOfTestimonialsPerView
         breakpoints: createBreakpoints(maxTestimonialsPerView),
