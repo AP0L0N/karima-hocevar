@@ -27,6 +27,7 @@
         "serve": "browser-sync start --proxy 'https://karima-hocevar.ddev.site' --files 'public_html/assets/**/*, templates/**/*' --no-notify"
     },
     "dependencies": {
+        "bootstrap-icons": "^1.13.1",
         "braces": "^3.0.3",
         "chokidar": "^4.0.3",
         "detect-libc": "^1.0.3",
